@@ -1,0 +1,18 @@
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ 'coc-clangd',
+  \ 'coc-godot',
+  \ 'coc-rls',
+  \ 'coc-vetur',
+  \ 'coc-css',
+  \ 'coc-fish',
+  \ 'coc-phpls',
+  \ 'coc-explorer',
+  \ 'coc-python',
+  \ 'coc-tabnine',
+  \ ]
