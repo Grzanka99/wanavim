@@ -1,4 +1,4 @@
-call plug#begin('./plugins')
+call plug#begin('~/.config/nvim/plugins')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'editorconfig/editorconfig-vim'
@@ -26,10 +26,10 @@ Plug 'mhinz/vim-startify'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 " TODO wait for fix of those two
-" Plug 'christianchiarulli/nvcode-color-schemes.vim'
-" Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
