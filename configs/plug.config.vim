@@ -26,9 +26,10 @@ Plug 'mhinz/vim-startify'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
-" Plug 'joshdick/onedark.vim'
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'joshdick/onedark.vim'
+" TODO wait for fix of those two
+" Plug 'christianchiarulli/nvcode-color-schemes.vim'
+" Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
