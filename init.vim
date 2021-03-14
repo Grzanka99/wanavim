@@ -5,7 +5,7 @@ source $HOME/.config/nvim/configs/coc.config.vim
 source $HOME/.config/nvim/configs/gui.config.vim
 source $HOME/.config/nvim/configs/fzf.config.vim
 source $HOME/.config/nvim/configs/nerd.config.vim
-" source $HOME/.config/nvim/configs/nvcode.config.vim
+source $HOME/.config/nvim/configs/nvcode.config.vim
 source $HOME/.config/nvim/configs/blamer.config.vim
 source $HOME/.config/nvim/configs/rustfmt.config.vim
 source $HOME/.config/nvim/configs/prettier.config.vim

@@ -2,6 +2,7 @@
 
 " PROJECT NAVIGATION
 map                       <M-space>   :CocCommand explorer<CR>
+map                       <M-a>       :CocAction <CR>
 map                       <M-\>       <Plug>(coc-terminal-toggle)
 inoremap  <silent><expr>  <c-space>   coc#refresh()
 
@@ -35,9 +36,10 @@ inoremap                  <A-up>      <Esc>:m .-2<CR>==gi
 vnoremap                  <A-down>    :m '>+1<CR>gv=gv
 vnoremap                  <A-up>      :m '<-2<CR>gv=gv
 
-" use <tab> for trigger completion and navigate to the next complete item
+"use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
-  let col = col('.')[col - 1] =~ '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
 inoremap <silent><expr>   <TAB>       pumvisible() ? "\<C-n>" :
