@@ -19,7 +19,7 @@ vnoremap                  <M-c>       :call NERDComment(0,"toggle")<CR>
 
 " Beter tabbing
 vnoremap                  <           <gv
-vnoremap                  >           <gv
+vnoremap                  >           >gv
 
 " Move lines up/down
 nnoremap                  <A-j>       :m .+1<CR>==
