@@ -1,7 +1,9 @@
 " plug.config.vim MUST BE first
 source $HOME/.config/nvim/configs/plug.config.vim
 
-source $HOME/.config/nvim/configs/coc.config.vim
+source $HOME/.config/nvim/configs/lsp.config.vim
+luafile $HOME/.config/nvim/configs/compe.config.lua
+" source $HOME/.config/nvim/configs/coc.config.vim
 source $HOME/.config/nvim/configs/gui.config.vim
 source $HOME/.config/nvim/configs/fzf.config.vim
 source $HOME/.config/nvim/configs/nerd.config.vim

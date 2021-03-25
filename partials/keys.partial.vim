@@ -1,17 +1,17 @@
 " Keybindings
 
 " PROJECT NAVIGATION
-map                       <M-space>   :CocCommand explorer<CR>
-map                       <M-a>       :CocAction <CR>
-map                       <M-\>       <Plug>(coc-terminal-toggle)
-inoremap  <silent><expr>  <c-space>   coc#refresh()
+" map                       <M-space>   :CocCommand explorer<CR>
+" map                       <M-a>       :CocAction <CR>
+" map                       <M-\>       <Plug>(coc-terminal-toggle)
+" inoremap  <silent><expr>  <c-space>   coc#refresh()
 
 " Code navigation / manipulation
 " Remap keys for gotos
-nmap      <silent>        gd          <Plug>(coc-definition)
-nmap      <silent>        gy          <Plug>(coc-type-definition)
-nmap      <silent>        gi          <Plug>(coc-implementation)
-nmap      <silent>        gr          <Plug>(coc-refecences)
+" nmap      <silent>        gd          <Plug>(coc-definition)
+" nmap      <silent>        gy          <Plug>(coc-type-definition)
+" nmap      <silent>        gi          <Plug>(coc-implementation)
+" nmap      <silent>        gr          <Plug>(coc-refecences)
 
 " comments
 nnoremap                  <M-c>       :call NERDComment(0,"toggle")<CR>
@@ -68,3 +68,14 @@ nnoremap  <C-right> <C-w>l
 " nnoremap <M-S-k> :resize +2<CR>
 " nnoremap <M-S-h> :vertical resize -2<CR>
 " nnoremap <M-S-l> :vertical resize +2<CR>
+
+
+" NATIVE LSP
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>

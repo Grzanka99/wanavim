@@ -1,6 +1,12 @@
 call plug#begin('~/.config/nvim/plugins')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" completion
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" native lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
