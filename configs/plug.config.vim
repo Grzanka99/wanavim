@@ -8,6 +8,8 @@ Plug 'neovim/nvim-lspconfig' " lsp config
 Plug 'hrsh7th/nvim-compe' " completion client
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " sidebar tree
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'

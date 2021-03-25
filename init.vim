@@ -13,6 +13,7 @@ source $HOME/.config/nvim/configs/blamer.config.vim
 source $HOME/.config/nvim/configs/prettier.config.vim
 source $HOME/.config/nvim/configs/lightline.config.vim
 source $HOME/.config/nvim/configs/nvim-tree.config.vim
+source $HOME/.config/nvim/configs/vsnip.config.vim
 
 source $HOME/.config/nvim/basic.vim
 source $HOME/.config/nvim/autocmd.vim
@@ -24,5 +25,7 @@ luafile $HOME/.config/nvim/lang/css.lang.lua
 luafile $HOME/.config/nvim/lang/vue.lang.lua
 luafile $HOME/.config/nvim/lang/bash.lang.lua
 luafile $HOME/.config/nvim/lang/clang.lang.lua
+luafile $HOME/.config/nvim/lang/html.lang.lua
+luafile $HOME/.config/nvim/lang/intelephense.lang.lua
 
 colorscheme onedark

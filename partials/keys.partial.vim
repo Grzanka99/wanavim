@@ -46,6 +46,8 @@ nnoremap  <C-right> <C-w>l
 " nnoremap <M-S-h> :vertical resize -2<CR>
 " nnoremap <M-S-l> :vertical resize +2<CR>
 
+" Prettier
+nmap      <M-p>     <Plug>(Prettier)
 
 " NATIVE LSP
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
