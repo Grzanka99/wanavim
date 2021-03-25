@@ -6,9 +6,11 @@ call plug#begin('~/.config/nvim/plugins')
 " native lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
@@ -31,11 +33,11 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'mhinz/vim-startify'
 
 " Themes
-Plug 'arcticicestudio/nord-vim'
-Plug 'joshdick/onedark.vim'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'joshdick/onedark.vim'
 " TODO wait for fix of those two
-" Plug 'christianchiarulli/nvcode-color-schemes.vim'
-" Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
