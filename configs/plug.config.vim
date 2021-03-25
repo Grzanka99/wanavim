@@ -4,13 +4,12 @@ call plug#begin('~/.config/nvim/plugins')
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " native lsp
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
+Plug 'neovim/nvim-lspconfig' " lsp config
+Plug 'hrsh7th/nvim-compe' " completion client
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-tree.lua' " sidebar tree
 
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
@@ -24,9 +23,6 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-Plug 'rust-lang/rust.vim'
-
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
@@ -35,7 +31,6 @@ Plug 'mhinz/vim-startify'
 " Themes
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'joshdick/onedark.vim'
-" TODO wait for fix of those two
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
