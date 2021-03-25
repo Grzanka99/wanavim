@@ -21,6 +21,8 @@ set updatetime=300
 set timeoutlen=100
 set wrap nowrap
 
+set completeopt=menuone,noselect
+
 " undo after close buffer
 set undodir=$HOME/.config/nvim/undodir
 set undofile

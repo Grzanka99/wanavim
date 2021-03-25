@@ -1,18 +1,5 @@
 " Keybindings
 
-" PROJECT NAVIGATION
-" map                       <M-space>   :CocCommand explorer<CR>
-" map                       <M-a>       :CocAction <CR>
-" map                       <M-\>       <Plug>(coc-terminal-toggle)
-" inoremap  <silent><expr>  <c-space>   coc#refresh()
-
-" Code navigation / manipulation
-" Remap keys for gotos
-" nmap      <silent>        gd          <Plug>(coc-definition)
-" nmap      <silent>        gy          <Plug>(coc-type-definition)
-" nmap      <silent>        gi          <Plug>(coc-implementation)
-" nmap      <silent>        gr          <Plug>(coc-refecences)
-
 " comments
 nnoremap                  <M-c>       :call NERDComment(0,"toggle")<CR>
 vnoremap                  <M-c>       :call NERDComment(0,"toggle")<CR>
@@ -35,16 +22,6 @@ inoremap                  <A-down>    <Esc>:m .+1<CR>==gi
 inoremap                  <A-up>      <Esc>:m .-2<CR>==gi
 vnoremap                  <A-down>    :m '>+1<CR>gv=gv
 vnoremap                  <A-up>      :m '<-2<CR>gv=gv
-
-"use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr>   <TAB>       pumvisible() ? "\<C-n>" :
-                                    \ <SID>check_back_space() ? "\<Tab>" :
-                                    \ coc#refresh()
 
 " FZF
 map       <M-f>     :Files<CR>
@@ -75,7 +52,6 @@ nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <M-a> <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
@@ -83,3 +59,6 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " NvimTree
 nnoremap <M-space> :NvimTreeToggle<CR>
+
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
