@@ -6,6 +6,9 @@ call plug#begin('~/.config/nvim/plugins')
 " native lsp
 Plug 'neovim/nvim-lspconfig' " lsp config
 Plug 'hrsh7th/nvim-compe' " completion client
+Plug 'glepnir/lspsaga.nvim' " Floating info
+Plug 'onsails/lspkind-nvim'
+
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " sidebar tree
 Plug 'hrsh7th/vim-vsnip'

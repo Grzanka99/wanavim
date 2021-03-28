@@ -3,6 +3,8 @@ source $HOME/.config/nvim/configs/plug.config.vim
 
 source $HOME/.config/nvim/configs/lsp.config.vim
 luafile $HOME/.config/nvim/configs/compe.config.lua
+luafile $HOME/.config/nvim/configs/lspsaga.config.lua
+luafile $HOME/.config/nvim/configs/lspkind.config.lua
 
 " source $HOME/.config/nvim/configs/coc.config.vim
 source $HOME/.config/nvim/configs/gui.config.vim
