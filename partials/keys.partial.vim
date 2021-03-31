@@ -23,10 +23,10 @@ inoremap                  <A-up>      <Esc>:m .-2<CR>==gi
 vnoremap                  <A-down>    :m '>+1<CR>gv=gv
 vnoremap                  <A-up>      :m '<-2<CR>gv=gv
 
-" FZF
-map       <M-f>     :Files<CR>
-map       <M-b>     :Buffers<CR>
-nnoremap  <M-g>     :Rg<CR>
+" Telescope
+map       <M-f>     :Telescope<CR>
+map       <M-b>     :Telescope buffers<CR>
+nnoremap  <M-g>     :Telescope fd<CR>
 
 " WINDOW / WORKSPACE NAVIGATION AND MODIFICATION
 "Better window navigation
