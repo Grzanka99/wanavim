@@ -11,12 +11,13 @@ luafile $HOME/.config/nvim/configs/lspsaga.config.lua
 luafile $HOME/.config/nvim/configs/treesitter.config.lua
 luafile $HOME/.config/nvim/configs/vim-rooter.config.lua
 luafile $HOME/.config/nvim/configs/nvim-tree.config.lua
+luafile $HOME/.config/nvim/configs/ale.config.lua
 
 source $HOME/.config/nvim/configs/gui.config.vim
 source $HOME/.config/nvim/configs/nerd.config.vim
 source $HOME/.config/nvim/configs/nvcode.config.vim
 source $HOME/.config/nvim/configs/blamer.config.vim
-source $HOME/.config/nvim/configs/prettier.config.vim
+" source $HOME/.config/nvim/configs/prettier.config.vim
 source $HOME/.config/nvim/configs/lightline.config.vim
 source $HOME/.config/nvim/configs/vsnip.config.vim
 

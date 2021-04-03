@@ -67,8 +67,8 @@ return require('packer').startup(function(use)
 
   -- Autoformatters
   use 'editorconfig/editorconfig-vim'
-  use 'prettier/vim-prettier'
-
+  -- use 'prettier/vim-prettier'
+  use 'dense-analysis/ale'
 
   -- Other
   use 'preservim/nerdcommenter'

@@ -15,14 +15,13 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 vim.g.nvim_tree_bindings = {
     -- mappings
     ["<CR>"] = tree_cb("edit"),
-    -- ["l"] = tree_cb("edit"),
+    ["l"] = tree_cb("edit"),
     -- ["o"] = tree_cb("edit"),
     ["<2-LeftMouse>"] = tree_cb("edit"),
     ["<2-RightMouse>"] = tree_cb("cd"),
-    ["<C-]>"] = tree_cb("cd"),
     ["v"] = tree_cb("vsplit"),
     ["s"] = tree_cb("split"),
-    -- ["<C-t>"] = tree_cb("tabnew"),
+    ["<C-t>"] = tree_cb("tabnew"),
     -- ["h"] = tree_cb("close_node"),
     -- ["<BS>"] = tree_cb("close_node"),
     -- ["<S-CR>"] = tree_cb("close_node"),
