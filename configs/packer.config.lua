@@ -53,22 +53,21 @@ return require('packer').startup(function(use)
 
   -- Status line and bufferline
   use 'itchyny/lightline.vim'
+  -- use 'romgrk/barbar.nvim' -- crash with nvim-tree
 
   -- Colors
   use 'christianchiarulli/nvcode-color-schemes.vim'
-  -- use 'arcticicestudio/nord-vim'
-  -- use 'joshdick/onedark.vim'
+  use 'glepnir/zephyr-nvim'
 
   -- Git
-  use 'airblade/vim-gitgutter'
+  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
   use 'tpope/vim-fugitive'
-  use 'APZelos/blamer.nvim'
   use 'itchyny/vim-gitbranch'
 
   -- Autoformatters
   use 'editorconfig/editorconfig-vim'
   -- use 'prettier/vim-prettier'
-  use 'dense-analysis/ale'
+  use 'sbdchd/neoformat'
 
   -- Other
   use 'preservim/nerdcommenter'

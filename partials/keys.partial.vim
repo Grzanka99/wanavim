@@ -40,11 +40,8 @@ nnoremap  <C-down>  <C-w>j
 nnoremap  <C-up>    <C-w>k
 nnoremap  <C-right> <C-w>l
 
-" Use alt + shift + hjkl to resize window <dont use so disable>
-" nnoremap <M-S-j> :resize -2<CR>
-" nnoremap <M-S-k> :resize +2<CR>
-" nnoremap <M-S-h> :vertical resize -2<CR>
-" nnoremap <M-S-l> :vertical resize +2<CR>
+nnoremap  <C-TAB>   :tabnext<CR>
+nnoremap  <C-S-TAB> :tabprevious<CR>
 
 " NATIVE LSP
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
