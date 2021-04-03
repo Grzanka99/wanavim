@@ -1,7 +1,5 @@
-" plug.config.vim MUST BE first
-" source $HOME/.config/nvim/configs/plug.config.vim
 luafile $HOME/.config/nvim/configs/packer.config.lua
-source $HOME/.config/nvim/configs/lsp.config.vim
+luafile $HOME/.config/nvim/configs/lsp.config.vim
 
 " Load confifs
 luafile $HOME/.config/nvim/configs/compe.config.lua
