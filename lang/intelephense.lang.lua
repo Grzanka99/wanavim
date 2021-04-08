@@ -1,2 +1,2 @@
 -- npm install -g intelephense
-require'lspconfig'.intelephense.setup{}
+require "lspconfig".intelephense.setup {}
