@@ -1,5 +1,5 @@
 luafile $HOME/.config/nvim/configs/packer.config.lua
-luafile $HOME/.config/nvim/configs/lsp.config.vim
+luafile $HOME/.config/nvim/configs/lsp.config.lua
 
 " Load confifs
 luafile $HOME/.config/nvim/configs/compe.config.lua
@@ -20,8 +20,8 @@ source $HOME/.config/nvim/configs/vsnip.config.vim
 
 " Load another basic settings and keybindings
 source $HOME/.config/nvim/basic.vim
-source $HOME/.config/nvim/autocmd.vim
 source $HOME/.config/nvim/partials/keys.partial.vim
+source $HOME/.config/nvim/autocmd.vim
 
 " lang load
 luafile $HOME/.config/nvim/lang/ts.lang.lua
@@ -33,5 +33,6 @@ luafile $HOME/.config/nvim/lang/html.lang.lua
 luafile $HOME/.config/nvim/lang/intelephense.lang.lua
 luafile $HOME/.config/nvim/lang/python.lang.lua
 luafile $HOME/.config/nvim/lang/deno.lang.lua
+luafile $HOME/.config/nvim/lang/lua.lang.lua
 
-colorscheme nvcode
+colorscheme lunar
