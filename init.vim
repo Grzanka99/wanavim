@@ -15,7 +15,7 @@ luafile $HOME/.config/nvim/configs/nvcode.config.lua
 luafile $HOME/.config/nvim/configs/gui.config.lua
 luafile $HOME/.config/nvim/configs/nerd.config.lua
 luafile $HOME/.config/nvim/configs/galaxyline.config.lua
-luafile $HOME/.config/nvim/configs/vsnip.config.lua
+luafile $HOME/.config/nvim/configs/vsnip.config.lua " may not work
 
 " Load another basic settings and keybindings
 source $HOME/.config/nvim/basic.vim
