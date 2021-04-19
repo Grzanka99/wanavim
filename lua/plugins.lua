@@ -22,7 +22,7 @@ return require("packer").startup(
         use "neovim/nvim-lspconfig" -- lsp config
         use "glepnir/lspsaga.nvim" -- Floating info
         use "onsails/lspkind-nvim"
-        use "kabouzeid/nvim-lspinstall" -- autoinstall for some
+        -- use "kabouzeid/nvim-lspinstall" -- idk how to configure it with regular lsp langs
 
         -- Autocomplete
         use "hrsh7th/nvim-compe" -- completion client
@@ -55,9 +55,7 @@ return require("packer").startup(
         use "nvim-telescope/telescope-media-files.nvim"
 
         -- Status line and bufferline
-        -- use "itchyny/lightline.vim"
         use "glepnir/galaxyline.nvim"
-        -- use 'romgrk/barbar.nvim' -- crash with nvim-tree
 
         -- Colors
         use "christianchiarulli/nvcode-color-schemes.vim"
@@ -70,7 +68,6 @@ return require("packer").startup(
 
         -- Autoformatters
         use "editorconfig/editorconfig-vim"
-        -- use 'prettier/vim-prettier'
         use "sbdchd/neoformat"
 
         -- Other
