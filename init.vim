@@ -12,10 +12,10 @@ luafile $HOME/.config/nvim/configs/nvim-tree.config.lua
 luafile $HOME/.config/nvim/configs/gitsigns.config.lua
 luafile $HOME/.config/nvim/configs/neoformat.config.lua
 luafile $HOME/.config/nvim/configs/nvcode.config.lua
+luafile $HOME/.config/nvim/configs/gui.config.lua
+luafile $HOME/.config/nvim/configs/nerd.config.lua
+luafile $HOME/.config/nvim/configs/galaxyline.config.lua
 
-source $HOME/.config/nvim/configs/gui.config.vim
-source $HOME/.config/nvim/configs/nerd.config.vim
-source $HOME/.config/nvim/configs/lightline.config.vim
 source $HOME/.config/nvim/configs/vsnip.config.vim
 
 " Load another basic settings and keybindings

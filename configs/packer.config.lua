@@ -55,7 +55,8 @@ return require("packer").startup(
         use "nvim-telescope/telescope-media-files.nvim"
 
         -- Status line and bufferline
-        use "itchyny/lightline.vim"
+        -- use "itchyny/lightline.vim"
+        use "glepnir/galaxyline.nvim"
         -- use 'romgrk/barbar.nvim' -- crash with nvim-tree
 
         -- Colors
