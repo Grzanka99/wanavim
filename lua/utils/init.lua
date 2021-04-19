@@ -1,0 +1,1 @@
+require("utils.lang-loader")
