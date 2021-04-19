@@ -9,6 +9,9 @@ require("keybindings")
 -- configuration funcion loaders
 require("utils")
 
+-- configuration funcion loaders
+require("utils")
+
 -- plugins config
 require("config.lsp")
 require("config.compe")
