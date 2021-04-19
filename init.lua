@@ -1,11 +1,12 @@
 require("plugins")
-require("utils")
 
 -- base configuration
-
 require("config.nvim")
 require("config.colors")
 require("config.gui")
+
+-- configuration funcion loaders
+require("utils")
 
 -- plugins config
 require("config.lsp")
@@ -22,6 +23,7 @@ require("config.nvcode")
 require("config.nerd")
 require("config.galaxyline")
 require("config.vsnip")
+require("config.autocommands")
 
 vim.cmd("source $HOME/.config/nvim/partials/keys.partial.vim")
 vim.cmd("source $HOME/.config/nvim/autocmd.vim")
