@@ -4,6 +4,7 @@ require("plugins")
 require("config.nvim")
 require("config.colors")
 require("config.gui")
+require("keybindings")
 
 -- configuration funcion loaders
 require("utils")
@@ -24,5 +25,3 @@ require("config.nerd")
 require("config.galaxyline")
 require("config.vsnip")
 require("config.autocommands")
-
-vim.cmd("source $HOME/.config/nvim/partials/keys.partial.vim")
