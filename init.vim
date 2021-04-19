@@ -1,7 +1,7 @@
-luafile $HOME/.config/nvim/configs/packer.config.lua
-luafile $HOME/.config/nvim/configs/lsp.config.lua
+luafile $HOME/.config/nvim/plugins.lua
 
 " Load confifs
+luafile $HOME/.config/nvim/configs/lsp.config.lua
 luafile $HOME/.config/nvim/configs/compe.config.lua
 luafile $HOME/.config/nvim/configs/lspkind.config.lua
 luafile $HOME/.config/nvim/configs/telescope.config.lua
@@ -15,8 +15,7 @@ luafile $HOME/.config/nvim/configs/nvcode.config.lua
 luafile $HOME/.config/nvim/configs/gui.config.lua
 luafile $HOME/.config/nvim/configs/nerd.config.lua
 luafile $HOME/.config/nvim/configs/galaxyline.config.lua
-
-source $HOME/.config/nvim/configs/vsnip.config.vim
+luafile $HOME/.config/nvim/configs/vsnip.config.lua
 
 " Load another basic settings and keybindings
 source $HOME/.config/nvim/basic.vim
