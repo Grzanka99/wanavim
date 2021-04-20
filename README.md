@@ -1,12 +1,12 @@
 # This is my preffered Neovim configuration
 
-I already reaorganized file structure ([Old](https://github.com/Grzanka//neovim-config))
+This config is strongly inspired by [LunarVim](https://github.com/ChristianChiarulli/LunarVim), but has other file structure, and will be more personal, i guess. We'll see.
 
 Requirements:
+
 - NodeJS
 - Python3
 - Neovim
-- fzf
 
 Recommended for gui: [Goneovim](https://github.com/akiyosi/goneovim)
 
