@@ -1,7 +1,7 @@
 local autoFormatters = {
     lsp = {
         prefix = "BufWritePre",
-        filetypes = {"js", "ts", "jsx", "py", "c", "cpp", "vue"},
+        filetypes = {"*.js", "*.ts", "*.jsx", "*.py", "*.c", "*.cpp", "*.vue"},
         command = "lua vim.lsp.buf.formatting_sync(nil, 100)"
     },
     neoformat = {
@@ -11,7 +11,7 @@ local autoFormatters = {
     }
 }
 
-local autoRealod = {
+local autoRelaod = {
     autoreload = {
         prefix = "FocusGained",
         filetypes = nil,
@@ -19,5 +19,20 @@ local autoRealod = {
     }
 }
 
+local dashboard = {
+    lines = {
+        prefix = "FileType",
+        filetypes = {"DASHBOARD", "dashboard"},
+        command = "setlocal nocursorline noswapfile synmaxcol& signcolumn=no norelativenumber nocursorcolumn nospell  nolist  nonumber bufhidden=wipe colorcolumn= foldcolumn=0 matchpairs= "
+    }
+    -- TODO Will be usefull if I add barbar
+    -- tabline = {
+    --     prefix = "FileType",
+    --     filetypes = {"dashboard"},
+    --     command = "set showtabline=0 | autocmd BufLeave <buffer> set showtabline=2"
+    -- }
+}
+
 loadAutocommands(autoFormatters)
-loadAutocommands(autoRealod)
+loadAutocommands(autoRelaod)
+loadAutocommands(dashboard)

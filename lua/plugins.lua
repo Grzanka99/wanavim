@@ -72,7 +72,8 @@ return require("packer").startup(
 
         -- Other
         use "preservim/nerdcommenter"
-        use "mhinz/vim-startify"
+        -- use "mhinz/vim-startify"
+        use "ChristianChiarulli/dashboard-nvim"
         use "airblade/vim-rooter"
     end
 )

@@ -8,7 +8,7 @@ function loadAutocommands(autocommands)
             vim.cmd("autocmd " .. command.prefix .. " * " .. command.command)
         else
             for _, filetype in pairs(command.filetypes) do
-                vim.cmd("autocmd " .. command.prefix .. " *." .. filetype .. " " .. command.command)
+                vim.cmd("autocmd " .. command.prefix .. " " .. filetype .. " " .. command.command)
             end
         end
 
