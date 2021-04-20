@@ -6,9 +6,9 @@ vim.g.dashboard_default_executive = "telescope"
 vim.g.dashboard_custom_section = {
     a = {description = {"  Find File          "}, command = "Telescope find_files"},
     b = {description = {"  Recently Used Files"}, command = "Telescope oldfiles"},
-    -- c = {description = {"  Load Last Session  "}, command = "SessionLoad"},
-    d = {description = {"  Find Word          "}, command = "Telescope live_grep"},
-    e = {description = {"  Configuration      "}, command = ":e $MYVIMRC"}
+    c = {description = {"  Find Word          "}, command = "Telescope live_grep"},
+    d = {description = {"  Configuration      "}, command = ":e $MYVIMRC"},
+    e = {description = {"🡇  Update             "}, command = "PackerSync"}
 }
 
 vim.g.dashboard_custom_footer = {"I use Arch btw..."}
