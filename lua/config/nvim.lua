@@ -22,6 +22,6 @@ vim.o.mouse = "a"
 vim.o.timeoutlen = 1500
 vim.wo.wrap = false
 vim.o.completeopt = "menuone,noselect"
-vim.o.undodir = "../../undodir"
 vim.o.undofile = true
+vim.cmd("set undodir=$HOME/.config/nvim/undodir")
 vim.o.termguicolors = true
