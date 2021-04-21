@@ -24,13 +24,12 @@ local dashboard = {
         prefix = "FileType",
         filetypes = {"DASHBOARD", "dashboard"},
         command = "setlocal nocursorline noswapfile synmaxcol& signcolumn=no norelativenumber nocursorcolumn nospell  nolist  nonumber bufhidden=wipe colorcolumn= foldcolumn=0 matchpairs= "
+    },
+    tabline = {
+        prefix = "FileType",
+        filetypes = {"dashboard"},
+        command = "set showtabline=0 | autocmd BufLeave <buffer> set showtabline=2"
     }
-    -- TODO Will be usefull if I add barbar
-    -- tabline = {
-    --     prefix = "FileType",
-    --     filetypes = {"dashboard"},
-    --     command = "set showtabline=0 | autocmd BufLeave <buffer> set showtabline=2"
-    -- }
 }
 
 loadAutocommands(autoFormatters)

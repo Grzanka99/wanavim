@@ -1,0 +1,21 @@
+require("config.plugins.autocommands")
+require("config.plugins.compe")
+require("config.plugins.dashboard")
+require("config.plugins.galaxyline")
+require("config.plugins.gitsigns")
+require("config.plugins.lsp")
+require("config.plugins.lspkind")
+require("config.plugins.neoformat")
+require("config.plugins.nerdcommenter")
+require("config.plugins.nvcode")
+require("config.plugins.nvim-tree")
+require("config.plugins.telescope")
+require("config.plugins.treesitter")
+require("config.plugins.treesitter")
+require("config.plugins.vim-rooter")
+require("config.plugins.vsnip")
+
+-- Just loaders, without settings
+
+require("colorizer").setup()
+require("lspsaga").init_lsp_saga()
