@@ -1,5 +1,4 @@
----@diagnostic disable-next-line: lowercase-global
-function loadAutocommands(autocommands)
+local function loadAutocommands(autocommands)
     for group, command in pairs(autocommands) do
         vim.cmd("augroup " .. group)
         vim.cmd("autocmd!")
@@ -15,3 +14,5 @@ function loadAutocommands(autocommands)
         vim.cmd("augroup END")
     end
 end
+
+return loadAutocommands

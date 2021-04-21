@@ -1,3 +1,5 @@
+local utils = require("utils")
+
 -- list of preconfigured languages and is their enabled
 local preconfiguredLanguages = {
     {name = "lspinstall", enabled = false}, -- todo
@@ -13,4 +15,4 @@ local preconfiguredLanguages = {
     {name = "lua", enabled = true}
 }
 
-loadLanguages(preconfiguredLanguages)
+utils.loadLanguages(preconfiguredLanguages)

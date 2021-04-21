@@ -1,3 +1,7 @@
-require("utils.lang-loader")
-require("utils.autocommand-loader")
-require("utils.os-capture")
+local utils = {
+    loadLanguages = require("utils.lang-loader"),
+    loadAutocommands = require("utils.autocommand-loader"),
+    captureShell = require("utils.os-capture")
+}
+
+return utils

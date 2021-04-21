@@ -1,3 +1,5 @@
+local utils = require("utils")
+
 local autoFormatters = {
     lsp = {
         prefix = "BufWritePre",
@@ -32,6 +34,6 @@ local dashboard = {
     }
 }
 
-loadAutocommands(autoFormatters)
-loadAutocommands(autoRelaod)
-loadAutocommands(dashboard)
+utils.loadAutocommands(autoFormatters)
+utils.loadAutocommands(autoRelaod)
+utils.loadAutocommands(dashboard)

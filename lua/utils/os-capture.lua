@@ -1,4 +1,4 @@
-function os.capture(cmd, array)
+local function captureShell(cmd, array)
     local f = assert(io.popen(cmd, "r"))
     local s = assert(f:read("*a"))
     f:close()
@@ -11,3 +11,5 @@ function os.capture(cmd, array)
     end
     return s
 end
+
+return captureShell

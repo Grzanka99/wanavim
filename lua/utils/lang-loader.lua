@@ -1,4 +1,4 @@
-function loadLanguages(LangList)
+local function loadLanguages(LangList)
     ---@diagnostic disable-next-line: unused-local
     for key, lang in pairs(LangList) do
         if lang.enabled then
@@ -8,3 +8,5 @@ function loadLanguages(LangList)
 
     return true
 end
+
+return loadLanguages
