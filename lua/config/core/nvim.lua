@@ -25,3 +25,4 @@ vim.o.completeopt = "menuone,noselect"
 vim.o.undofile = true
 vim.cmd("set undodir=$HOME/.config/nvim/undodir")
 vim.o.termguicolors = true
+vim.o.hidden = true

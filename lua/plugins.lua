@@ -77,6 +77,7 @@ return require("packer").startup(
         use "ChristianChiarulli/dashboard-nvim"
         use "airblade/vim-rooter"
         use "yamatsum/nvim-cursorline"
+        use "akinsho/nvim-toggleterm.lua"
 
         -- Testing
     end

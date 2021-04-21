@@ -69,6 +69,9 @@ map("n", "<Leader>dn", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<M-Space>", ":NvimTreeToggle<CR>")
 
+-- Terminal
+map("n", "<Leader>t", ":ToggleTerm<CR>")
+
 -- completion, codeinfo
 map("i", "<C-Space>", "compe#complete()", {expr = true})
 map("i", "<CR>", "compe#confirm('<CR>')", {expr = true})
