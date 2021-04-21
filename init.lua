@@ -1,9 +1,7 @@
 require("plugins")
 
 -- base configuration
-require("config.nvim")
-require("config.colors")
-require("config.gui")
+require("config.core")
 require("keybindings")
 
 -- configuration funcion loaders
@@ -29,3 +27,6 @@ require("config.galaxyline")
 require("config.vsnip")
 require("config.dashboard")
 require("config.autocommands")
+require("config.colorizer")
+
+-- Testing

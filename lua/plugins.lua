@@ -38,7 +38,7 @@ return require("packer").startup(
         use "nvim-treesitter/nvim-treesitter-refactor"
         use "nvim-treesitter/playground"
         use "p00f/nvim-ts-rainbow"
-        use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
+        -- use {"lukas-reineke/indent-blankline.nvim", branch = "lua"} -- TODO reenable after finding, how to disable for the buffer
         use "JoosepAlviste/nvim-ts-context-commentstring"
         use "windwp/nvim-ts-autotag"
 
@@ -56,10 +56,12 @@ return require("packer").startup(
 
         -- Status line and bufferline
         use "glepnir/galaxyline.nvim"
+        use "romgrk/barbar.nvim"
 
         -- Colors
         use "christianchiarulli/nvcode-color-schemes.vim"
         use "glepnir/zephyr-nvim"
+        use "norcalli/nvim-colorizer.lua" -- in-text colors
 
         -- Git
         use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}
@@ -72,8 +74,10 @@ return require("packer").startup(
 
         -- Other
         use "preservim/nerdcommenter"
-        -- use "mhinz/vim-startify"
         use "ChristianChiarulli/dashboard-nvim"
         use "airblade/vim-rooter"
+        use "yamatsum/nvim-cursorline"
+
+        -- Testing
     end
 )

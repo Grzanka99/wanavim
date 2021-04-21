@@ -39,7 +39,7 @@ map("i", "<M-down>", "<Esc>:m .+1<CR>==")
 map("i", "<M-up>", "<Esc>:m .-2<CR>==")
 
 -- Telescope (searching)
-map("n", "<Leader>f", ":Telescope<CR>")
+map("n", "<Leader>f", ":Telescope find_files<CR>")
 map("n", "<Leader>b", ":Telescope buffers<CR>")
 map("n", "<Leader>g", ":Telescope fd<CR>")
 
