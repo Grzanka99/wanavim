@@ -56,6 +56,7 @@ map("n", "<C-S-TAB>", ":tabprevious<CR>")
 
 -- Native LSP
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 map("n", "<Leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "<Leader>gi", "<cmd>lua vim.lsp.buf.implementations()<CR>")
