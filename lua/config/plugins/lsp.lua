@@ -12,7 +12,8 @@ local preconfiguredLanguages = {
     {name = "php", enabled = true}, -- php
     {name = "python", enabled = true},
     {name = "deno", enabled = false},
-    {name = "lua", enabled = true}
+    {name = "lua", enabled = true},
+    {name = "rust", enabled = true}
 }
 
 utils.loadLanguages(preconfiguredLanguages)
