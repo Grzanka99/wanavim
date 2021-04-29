@@ -1,4 +1,3 @@
-require("config.plugins.autocommands")
 require("config.plugins.compe")
 require("config.plugins.dashboard")
 require("config.plugins.galaxyline")
