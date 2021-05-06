@@ -77,3 +77,6 @@ map("n", "<Leader>t", ":ToggleTerm<CR>")
 map("i", "<C-Space>", "compe#complete()", {expr = true})
 map("i", "<CR>", "compe#confirm('<CR>')", {expr = true})
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
+
+-- usefull
+map("n", "<Leader>w", ":w<CR>")
