@@ -14,6 +14,17 @@ __.lsp = {
     {name = "rust", enabled = true}
 }
 
+__.installedColorschemes = {
+    {url = "christianchiarulli/nvcode-color-schemes.vim", enabled = true},
+    {url = "glepnir/zephyr-nvim", enabled = false},
+    {url = "folke/tokyonight.nvim", enabled = true},
+    {url = "sainnhe/sonokai", enabled = false},
+    {url = "sainnhe/edge", enabled = false}
+}
+
+-- Colorcheme configuration
+vim.g.tokyonight_style = "day"
+
 __.colorscheme = "lunar"
 
 __.guifont = {

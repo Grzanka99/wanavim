@@ -32,10 +32,7 @@ return require("packer").startup(
         use "ChristianChiarulli/html-snippets" -- some snippets set
 
         -- Debugger / Diagnostics
-        use {
-            "folke/trouble.nvim",
-            requires = "kyazdani42/nvim-web-devicons"
-        }
+        use "folke/trouble.nvim"
 
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -63,9 +60,11 @@ return require("packer").startup(
         use "romgrk/barbar.nvim"
 
         -- Colors
-        use "christianchiarulli/nvcode-color-schemes.vim"
-        use "glepnir/zephyr-nvim"
-        use "norcalli/nvim-colorizer.lua" -- in-text colors
+        for _, colorscheme in pairs(__.installedColorschemes) do
+            if (colorscheme.enabled) then
+                use(colorscheme.url)
+            end
+        end
 
         -- Git
         use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}
@@ -83,6 +82,7 @@ return require("packer").startup(
         use "akinsho/nvim-toggleterm.lua"
         use "folke/todo-comments.nvim"
         use "folke/which-key.nvim"
+        use "norcalli/nvim-colorizer.lua" -- in-text colors
 
         -- Testing
     end
