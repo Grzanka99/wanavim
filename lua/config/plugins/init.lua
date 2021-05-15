@@ -11,11 +11,13 @@ require("config.plugins.nvim-toggleterm")
 require("config.plugins.nvim-tree")
 require("config.plugins.telescope")
 require("config.plugins.treesitter")
-require("config.plugins.treesitter")
 require("config.plugins.vim-rooter")
 require("config.plugins.vsnip")
+require("config.plugins.which-key")
 
 -- Just loaders, without settings
 
 require("colorizer").setup()
 require("lspsaga").init_lsp_saga()
+require("todo-comments").setup()
+require("trouble").setup()

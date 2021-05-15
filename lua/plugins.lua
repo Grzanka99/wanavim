@@ -31,14 +31,18 @@ return require("packer").startup(
         use "rafamadriz/friendly-snippets" -- some snippets set
         use "ChristianChiarulli/html-snippets" -- some snippets set
 
-        -- Debugger
+        -- Debugger / Diagnostics
+        use {
+            "folke/trouble.nvim",
+            requires = "kyazdani42/nvim-web-devicons"
+        }
 
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
         use "nvim-treesitter/nvim-treesitter-refactor"
         use "nvim-treesitter/playground"
         use "p00f/nvim-ts-rainbow"
-        -- use {"lukas-reineke/indent-blankline.nvim", branch = "lua"} -- TODO reenable after finding, how to disable for the buffer
+        -- use {"lukas-reineke/indent-blankline.nvim", branch = "lua"} -- TODO: reenable after finding, how to disable for the buffer
         use "JoosepAlviste/nvim-ts-context-commentstring"
         use "windwp/nvim-ts-autotag"
 
@@ -77,6 +81,8 @@ return require("packer").startup(
         use "ChristianChiarulli/dashboard-nvim"
         use "airblade/vim-rooter"
         use "akinsho/nvim-toggleterm.lua"
+        use "folke/todo-comments.nvim"
+        use "folke/which-key.nvim"
 
         -- Testing
     end
