@@ -1,6 +1,6 @@
 -- List of languageservers that can be load by LSP and bool if enable
 __.lsp = {
-    {name = "lspinstall", enabled = false}, -- todo
+    {name = "lspinstall", enabled = false}, -- TODO:
     {name = "ts", enabled = true},
     {name = "css", enabled = true},
     {name = "vue", enabled = true},

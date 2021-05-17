@@ -39,7 +39,6 @@ return require("packer").startup(
         use "nvim-treesitter/nvim-treesitter-refactor"
         use "nvim-treesitter/playground"
         use "p00f/nvim-ts-rainbow"
-        -- use {"lukas-reineke/indent-blankline.nvim", branch = "lua"} -- TODO: reenable after finding, how to disable for the buffer
         use "JoosepAlviste/nvim-ts-context-commentstring"
         use "windwp/nvim-ts-autotag"
 

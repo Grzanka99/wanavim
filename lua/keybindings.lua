@@ -39,9 +39,9 @@ map("i", "<M-down>", "<Esc>:m .+1<CR>==")
 map("i", "<M-up>", "<Esc>:m .-2<CR>==")
 
 -- Telescope (searching)
-map("n", "<Leader>f", ":Telescope find_files<CR>")
-map("n", "<Leader>b", ":Telescope buffers<CR>")
-map("n", "<Leader>g", ":Telescope fd<CR>")
+map("n", "<Leader>ff", ":Telescope find_files<CR>")
+map("n", "<Leader>fb", ":Telescope buffers<CR>")
+map("n", "<Leader>fg", ":Telescope fd<CR>")
 
 -- WINDOW / WORKSPACE NAVIAGATION AND MODIFICATION
 -- Better window navigation
@@ -65,6 +65,7 @@ map("n", "<Leader>da", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>
 map("n", "<Leader>dk", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "<Leader>dp", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>")
 map("n", "<Leader>dn", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
+map("n", "<Leader>dt", ":TroubleToggle<CR>")
 
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
