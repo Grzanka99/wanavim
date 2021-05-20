@@ -31,3 +31,5 @@ __.guifont = {
     name = "FiraCode Nerd Font",
     size = 12
 }
+
+__.language = "en_GB.utf8"
