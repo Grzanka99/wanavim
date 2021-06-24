@@ -32,4 +32,4 @@ __.guifont = {
     size = 12
 }
 
-__.language = "en_GB.utf8"
+__.language = "en_US.utf8"
