@@ -1,6 +1,6 @@
 local utils = require("utils")
 -- Use this if you have installed fortune and cowsay, its funny :P
-vim.g.dashboard_custom_header = utils.captureShell("fortune | cowsay", true)
+vim.g.dashboard_custom_header = utils.captureShell("fortune -s | cowsay", true)
 
 vim.g.dashboard_default_executive = "telescope"
 
