@@ -7,11 +7,11 @@ __.lsp = {
     {name = "bash", enabled = true},
     {name = "clang", enabled = true},
     {name = "html", enabled = true},
-    {name = "php", enabled = true}, -- php
-    {name = "python", enabled = true},
+    {name = "php", enabled = false}, -- php
+    {name = "python", enabled = false},
     {name = "deno", enabled = false},
     {name = "lua", enabled = true},
-    {name = "rust", enabled = true}
+    {name = "rust", enabled = false}
 }
 
 __.installedColorschemes = {

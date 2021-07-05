@@ -71,6 +71,8 @@ map("n", "<Leader>dt", ":TroubleToggle<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<M-Space>", ":NvimTreeToggle<CR>")
 
+map("n", "<Leader>o", ":SymbolsOutline<CR>")
+
 -- Terminal
 map("n", "<Leader>t", ":ToggleTerm<CR>")
 
