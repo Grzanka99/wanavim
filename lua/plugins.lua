@@ -33,6 +33,8 @@ return require("packer").startup(
 
         -- Debugger / Diagnostics
         use "folke/trouble.nvim"
+        -- use "Pocco81/DAPInstall.nvim"
+        -- use "mfussenegger/nvim-dap"
 
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}

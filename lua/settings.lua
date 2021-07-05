@@ -29,7 +29,7 @@ __.colorscheme = "lunar"
 
 __.guifont = {
     name = "FiraCode Nerd Font",
-    size = 12
+    size = 14
 }
 
 __.language = "en_US.utf8"

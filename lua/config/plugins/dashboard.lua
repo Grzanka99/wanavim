@@ -9,7 +9,7 @@ vim.g.dashboard_custom_section = {
     b = {description = {"  Recently Used Files"}, command = "Telescope oldfiles"},
     c = {description = {"  Find Word          "}, command = "Telescope live_grep"},
     d = {description = {"  Configuration      "}, command = ":e $HOME/.config/nvim/lua/settings.lua"},
-    e = {description = {"🡇  Update             "}, command = "PackerSync"}
+    e = {description = {"  Update             "}, command = "PackerSync"}
 }
 
 vim.g.dashboard_custom_footer = {"I use Arch btw..."}
