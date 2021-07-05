@@ -14,6 +14,20 @@ __.lsp = {
     {name = "rust", enabled = true}
 }
 
+-- NOTE: REMEMBER TO SYNC PACKER
+__.modules = {
+    lsp = true,
+    tree =true,
+    autocompletion = true, -- NOTE: lsp required
+    diagnostic = true,
+    advancedHighlitning = true, -- NOTE: treesitter
+    topbars = true,
+    searching = true, -- telescope
+    terminal = true,
+    git = true,
+    autoFormating = true
+}
+
 __.installedColorschemes = {
     {url = "christianchiarulli/nvcode-color-schemes.vim", enabled = true},
     {url = "glepnir/zephyr-nvim", enabled = false},

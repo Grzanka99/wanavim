@@ -34,6 +34,9 @@ local dashboard = {
     }
 }
 
-utils.loadAutocommands(autoFormatters)
+if __.modules.autoFormating then
+    utils.loadAutocommands(autoFormatters)
+end
+
 utils.loadAutocommands(autoRelaod)
 utils.loadAutocommands(dashboard)
