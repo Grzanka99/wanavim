@@ -49,6 +49,7 @@ return require("packer").startup(
 
         -- Explorer
         use "kyazdani42/nvim-tree.lua" -- sidebar tree
+				use "simrat39/symbols-outline.nvim"
 
         -- Telescope (searching)
         use "nvim-lua/popup.nvim"

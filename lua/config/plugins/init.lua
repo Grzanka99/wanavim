@@ -14,6 +14,7 @@ require("config.plugins.treesitter")
 require("config.plugins.vim-rooter")
 require("config.plugins.vsnip")
 require("config.plugins.which-key")
+require("config.plugins.symbols-outline")
 -- require("config.plugins.dap")
 
 -- Just loaders, without settings
