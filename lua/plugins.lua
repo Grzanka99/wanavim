@@ -76,6 +76,7 @@ return require("packer").startup(
         use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}
         use "tpope/vim-fugitive"
         use "itchyny/vim-gitbranch"
+        use "sindrets/diffview.nvim"
 
         -- Autoformatters
         use "editorconfig/editorconfig-vim"

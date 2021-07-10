@@ -51,8 +51,9 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
-map("n", "<C-TAB>", ":tabnext<CR>")
-map("n", "<C-S-TAB>", ":tabprevious<CR>")
+map("n", "<M-.>", ":BufferNext<CR>")
+map("n", "<M-,>", ":BufferPrevious<CR>")
+map("n", "<M-/>", ":BufferClose<CR>")
 
 -- Native LSP
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
@@ -81,6 +82,7 @@ map("n", "<Leader>t", ":ToggleTerm<CR>")
 map("i", "<C-Space>", "compe#complete()", {expr = true})
 map("i", "<CR>", "compe#confirm('<CR>')", {expr = true})
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
-
+map({"i", "s"}, "<Tab>", "v:lua.tab_complete()", {expr = true})
+map({"i", "s"}, "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
