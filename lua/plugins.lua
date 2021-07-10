@@ -22,6 +22,12 @@ return require("packer").startup(
         use "neovim/nvim-lspconfig" -- lsp config
         use "glepnir/lspsaga.nvim" -- Floating info
         use "onsails/lspkind-nvim"
+        use {
+            "ahmedkhalf/lsp-rooter.nvim",
+            config = function()
+                require("lsp-rooter").setup {}
+            end
+        }
         -- use "kabouzeid/nvim-lspinstall" -- idk how to configure it with regular lsp langs
 
         -- Autocomplete
@@ -38,8 +44,6 @@ return require("packer").startup(
 
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-        use "nvim-treesitter/nvim-treesitter-refactor"
-        use "nvim-treesitter/playground"
         use "p00f/nvim-ts-rainbow"
         use "JoosepAlviste/nvim-ts-context-commentstring"
         use "windwp/nvim-ts-autotag"
@@ -49,7 +53,7 @@ return require("packer").startup(
 
         -- Explorer
         use "kyazdani42/nvim-tree.lua" -- sidebar tree
-				use "simrat39/symbols-outline.nvim"
+        use "simrat39/symbols-outline.nvim"
 
         -- Telescope (searching)
         use "nvim-lua/popup.nvim"
@@ -80,12 +84,13 @@ return require("packer").startup(
         -- Other
         use "preservim/nerdcommenter"
         use "ChristianChiarulli/dashboard-nvim"
-        use "airblade/vim-rooter"
         use "akinsho/nvim-toggleterm.lua"
         use "folke/todo-comments.nvim"
         use "folke/which-key.nvim"
         use "norcalli/nvim-colorizer.lua" -- in-text colors
 
-        -- Testing
+        -- Testing and TODO
+        -- https://github.com/windwp/nvim-spectre
+        -- https://github.com/mhartington/formatter.nvim
     end
 )

@@ -62,9 +62,10 @@ map("n", "<Leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "<Leader>gi", "<cmd>lua vim.lsp.buf.implementations()<CR>")
 
 map("n", "<Leader>da", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
-map("n", "<Leader>dk", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "<Leader>dp", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>")
 map("n", "<Leader>dn", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
+map("n", "<Leader>dr", "<cmd>lua require('lspsaga.rename').rename()<CR>")
+map("n", "<Leader>dd", "<cmd>lua require('lspsaga.provider').preview_definition()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
 
 -- NvimTree
