@@ -13,7 +13,7 @@ local autoFormatters = {
     }
 }
 
-local autoRelaod = {
+local autoReload = {
     autoreload = {
         prefix = "FocusGained",
         filetypes = nil,
@@ -35,5 +35,5 @@ local dashboard = {
 }
 
 utils.loadAutocommands(autoFormatters)
-utils.loadAutocommands(autoRelaod)
+utils.loadAutocommands(autoReload)
 utils.loadAutocommands(dashboard)
