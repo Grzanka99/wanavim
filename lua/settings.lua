@@ -1,6 +1,6 @@
 -- List of languageservers that can be load by LSP and bool if enable
 __.lsp = {
-    {name = "lspinstall", enabled = false}, -- TODO:
+    {name = "lspinstall", enabled = true}, -- TODO:
     {name = "ts", enabled = true},
     {name = "css", enabled = true},
     {name = "vue", enabled = true},
@@ -25,11 +25,11 @@ __.installedColorschemes = {
 -- Colorcheme configuration
 vim.g.tokyonight_style = "day"
 -- current word occurrences highlight
-__.colorscheme = "lunar"
+__.colorscheme = "nvcode"
 
 __.guifont = {
     name = "FiraCode Nerd Font",
-    size = 14
+    size = 12
 }
 
 __.language = "en_US.utf8"

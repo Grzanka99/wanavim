@@ -28,7 +28,7 @@ return require("packer").startup(
                 require("lsp-rooter").setup {}
             end
         }
-        -- use "kabouzeid/nvim-lspinstall" -- idk how to configure it with regular lsp langs
+        use "kabouzeid/nvim-lspinstall" -- idk how to configure it with regular lsp langs
 
         -- Autocomplete
         use "hrsh7th/nvim-compe" -- completion client
