@@ -59,7 +59,8 @@ map("n", "<M-/>", ":BufferClose<CR>")
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-map("n", "<Leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+-- map("n", "<Leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+map("n", "<Leader>gr", ":Trouble lsp_references<CR>")
 map("n", "<Leader>gi", "<cmd>lua vim.lsp.buf.implementations()<CR>")
 
 map("n", "<Leader>da", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
@@ -68,6 +69,7 @@ map("n", "<Leader>dn", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
 map("n", "<Leader>dr", "<cmd>lua require('lspsaga.rename').rename()<CR>")
 map("n", "<Leader>dd", "<cmd>lua require('lspsaga.provider').preview_definition()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
+map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
 
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
