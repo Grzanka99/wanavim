@@ -89,7 +89,7 @@ return require("packer").startup(
         use "folke/todo-comments.nvim"
         use "folke/which-key.nvim"
         use "norcalli/nvim-colorizer.lua" -- in-text colors
-        use "yamatsum/nvim-cursorline"
+        use "Grzanka99/nvim-cursorline"
 
         -- Testing and TODO
         -- https://github.com/windwp/nvim-spectre

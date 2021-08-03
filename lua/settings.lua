@@ -25,7 +25,7 @@ __.installedColorschemes = {
 -- Colorcheme configuration
 vim.g.tokyonight_style = "day"
 -- current word occurrences highlight
-__.colorscheme = "nvcode"
+__.colorscheme = "onedark"
 
 __.guifont = {
     name = "FiraCode Nerd Font",
