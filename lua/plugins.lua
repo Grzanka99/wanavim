@@ -83,7 +83,6 @@ return require("packer").startup(
         use "sbdchd/neoformat"
 
         -- Other
-        use "preservim/nerdcommenter"
         use "ChristianChiarulli/dashboard-nvim"
         use "akinsho/nvim-toggleterm.lua"
         use "folke/todo-comments.nvim"

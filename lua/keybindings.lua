@@ -20,8 +20,8 @@ end
 vim.g.mapleader = " "
 
 -- comments
-map({"n", "v"}, "<Leader>c", ':call NERDComment(0,"toggle")<CR>', {noremap = true, silent = true})
-map({"n", "v"}, "<M-c>", ':call NERDComment(0,"toggle")<CR>', {noremap = true, silent = true})
+map({"n", "v"}, "<Leader>c", ':nerdcomment#Comment(0,"toggle")<CR>', {noremap = true, silent = true})
+map({"n", "v"}, "<M-c>", ':nerdcomment#Comment(0,"toggle")<CR>', {noremap = true, silent = true})
 
 -- Better tabbing
 map("v", "<", "<gv")

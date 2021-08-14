@@ -23,6 +23,8 @@ local colors = {
 
 if __.colorscheme == "nvcode" then
     colors.bg = "#2E2E2E"
+elseif __.colorscheme == "material" then
+    colors.bg = "#0F111A"
 end
 
 local condition = require("galaxyline.condition")
