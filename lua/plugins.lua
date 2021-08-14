@@ -29,6 +29,15 @@ return require("packer").startup(
             end
         }
         use "kabouzeid/nvim-lspinstall" -- idk how to configure it with regular lsp langs
+        use(
+            {
+                "jose-elias-alvarez/null-ls.nvim",
+                config = function()
+                    require("null-ls").config({})
+                    require("lspconfig")["null-ls"].setup({})
+                end
+            }
+        )
 
         -- Autocomplete
         use "hrsh7th/nvim-compe" -- completion client
@@ -80,7 +89,7 @@ return require("packer").startup(
 
         -- Autoformatters
         use "editorconfig/editorconfig-vim"
-        use "sbdchd/neoformat"
+        -- use "sbdchd/neoformat"
 
         -- Other
         use "ChristianChiarulli/dashboard-nvim"

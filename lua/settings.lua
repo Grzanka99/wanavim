@@ -1,18 +1,18 @@
 -- List of languageservers that can be load by LSP and bool if enable
 __.lsp = {
-    {name = "lspinstall", enabled = true}, -- TODO:
-    {name = "css", enabled = true},
-    {name = "html", enabled = true},
-    {name = "lua", enabled = true},
+	{ name = "lspinstall", enabled = true }, -- TODO:
+	{ name = "css", enabled = true },
+	{ name = "html", enabled = true },
+	{ name = "lua", enabled = true },
 }
 
 __.installedColorschemes = {
-    {url = "christianchiarulli/nvcode-color-schemes.vim", enabled = true},
-    {url = "glepnir/zephyr-nvim", enabled = false},
-    {url = "folke/tokyonight.nvim", enabled = false},
-    {url = "sainnhe/sonokai", enabled = false},
-    {url = "sainnhe/edge", enabled = false},
-    {url = "marko-cerovac/material.nvim", enabled = true}
+	{ url = "christianchiarulli/nvcode-color-schemes.vim", enabled = true },
+	{ url = "glepnir/zephyr-nvim", enabled = false },
+	{ url = "folke/tokyonight.nvim", enabled = false },
+	{ url = "sainnhe/sonokai", enabled = false },
+	{ url = "sainnhe/edge", enabled = false },
+	{ url = "marko-cerovac/material.nvim", enabled = true },
 }
 
 -- Colorcheme configuration
@@ -23,8 +23,8 @@ __.colorscheme = "material"
 vim.g.material_style = "deep ocean"
 
 __.guifont = {
-    name = "FiraCode Nerd Font",
-    size = 12
+	name = "FiraCode Nerd Font",
+	size = 12,
 }
 
 __.language = "en_US.utf8"
