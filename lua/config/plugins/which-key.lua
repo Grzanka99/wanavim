@@ -16,8 +16,6 @@ local mappings = {
         r = "lsp rename",
         d = "definition preview",
         k = "signature help",
-        n = "diagnostics next",
-        p = "diagnostics prev",
         t = "trouble (diagnostic list)"
     }
 }

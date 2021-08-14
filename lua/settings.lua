@@ -11,13 +11,16 @@ __.installedColorschemes = {
     {url = "glepnir/zephyr-nvim", enabled = false},
     {url = "folke/tokyonight.nvim", enabled = false},
     {url = "sainnhe/sonokai", enabled = false},
-    {url = "sainnhe/edge", enabled = false}
+    {url = "sainnhe/edge", enabled = false},
+    {url = "marko-cerovac/material.nvim", enabled = true}
 }
 
 -- Colorcheme configuration
 vim.g.tokyonight_style = "day"
 -- current word occurrences highlight
-__.colorscheme = "onedark"
+__.colorscheme = "material"
+
+vim.g.material_style = "deep ocean"
 
 __.guifont = {
     name = "FiraCode Nerd Font",
