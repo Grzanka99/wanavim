@@ -92,6 +92,7 @@ return require("packer").startup(
         -- use "sbdchd/neoformat"
 
         -- Other
+				use "terrortylor/nvim-comment"
         use "ChristianChiarulli/dashboard-nvim"
         use "akinsho/nvim-toggleterm.lua"
         use "folke/todo-comments.nvim"

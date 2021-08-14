@@ -1,40 +1,40 @@
 -- Map helper function, can get array of modes and also has some defaults
 local function map(modes, keymap, cmd, opt)
-    opt = opt or {}
+	opt = opt or {}
 
-    opt.noremap = opt.noremap or true
-    opt.silent = opt.noremap or true
+	opt.noremap = opt.noremap or true
+	opt.silent = opt.noremap or true
 
-    if type(modes) == "string" then
-        vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
-        return true
-    end
+	if type(modes) == "string" then
+		vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
+		return true
+	end
 
-    for _, mode in pairs(modes) do
-        vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
-    end
+	for _, mode in pairs(modes) do
+		vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
+	end
 
-    return true
+	return true
 end
 
 vim.g.mapleader = " "
 
 -- comments
-map({"n", "v"}, "<Leader>c", ':nerdcomment#Comment(0,"toggle")<CR>', {noremap = true, silent = true})
-map({"n", "v"}, "<M-c>", ':nerdcomment#Comment(0,"toggle")<CR>', {noremap = true, silent = true})
+map({ "n", "v" }, "<Leader>c", ":CommentToggle<CR>", { noremap = true, silent = true })
+map({ "n", "v" }, "<M-c>", ":CommentToggle<CR>", { noremap = true, silent = true })
 
 -- Better tabbing
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Move lines up/down
-map({"n", "v"}, "<M-j>", ":m .+1<CR>==")
-map({"n", "v"}, "<M-k>", ":m .-2<CR>==")
+map({ "n", "v" }, "<M-j>", ":m .+1<CR>==")
+map({ "n", "v" }, "<M-k>", ":m .-2<CR>==")
 map("i", "<M-j>", "<Esc>:m .+1<CR>==")
 map("i", "<M-k>", "<Esc>:m .-2<CR>==")
 
-map({"n", "v"}, "<M-down>", ":m .+1<CR>==")
-map({"n", "v"}, "<M-up>", ":m .-2<CR>==")
+map({ "n", "v" }, "<M-down>", ":m .+1<CR>==")
+map({ "n", "v" }, "<M-up>", ":m .-2<CR>==")
 map("i", "<M-down>", "<Esc>:m .+1<CR>==")
 map("i", "<M-up>", "<Esc>:m .-2<CR>==")
 
@@ -77,11 +77,11 @@ map("n", "<Leader>o", ":SymbolsOutline<CR>")
 map("n", "<Leader>t", ":ToggleTerm<CR>")
 
 -- completion, codeinfo
-map("i", "<C-Space>", "compe#complete()", {expr = true})
-map("i", "<CR>", "compe#confirm('<CR>')", {expr = true})
+map("i", "<C-Space>", "compe#complete()", { expr = true })
+map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
 map("n", "D", "<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>")
-map({"i", "s"}, "<Tab>", "v:lua.tab_complete()", {expr = true})
-map({"i", "s"}, "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+map({ "i", "s" }, "<Tab>", "v:lua.tab_complete()", { expr = true })
+map({ "i", "s" }, "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
