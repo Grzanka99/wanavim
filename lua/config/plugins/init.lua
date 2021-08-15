@@ -9,7 +9,6 @@ require("config.plugins.nvim-toggleterm")
 require("config.plugins.nvim-tree")
 require("config.plugins.telescope")
 require("config.plugins.treesitter")
-require("config.plugins.vim-rooter")
 require("config.plugins.which-key")
 require("config.plugins.symbols-outline")
 require("config.plugins.diffview")
@@ -19,7 +18,9 @@ require("config.plugins.nvim-comment")
 
 -- Just loaders, without settings
 
+require("lsp-rooter").setup({})
 require("colorizer").setup()
 require("lspsaga").init_lsp_saga()
 require("todo-comments").setup()
 require("trouble").setup()
+require("nvim-autopairs").setup()

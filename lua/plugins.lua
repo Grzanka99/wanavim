@@ -1,5 +1,6 @@
 local execute = vim.api.nvim_command
 local fn = vim.fn
+local packer = require("packer")
 
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
@@ -8,12 +9,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	execute("packadd packer.nvim")
 end
 
-vim.cmd("autocmd BufWritePost plugins.lua PackerCompile") -- Auto compile when there are changes in plugins.lua
+-- vim.cmd("autocmd BufWritePost plugins.lua PackerCompile") -- Auto compile when there are changes in plugins.lua
 
--- require('packer').init({display = {non_interactive = true}})
-require("packer").init({ display = { auto_clean = false } })
+packer.init({ display = { auto_clean = false } })
 
-return require("packer").startup(function(use)
+return packer.startup(function(use)
 	-- Packer can manage itself as an optional plugin
 	use("wbthomason/packer.nvim")
 
@@ -21,12 +21,7 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig") -- lsp config
 	use("glepnir/lspsaga.nvim") -- Floating info
 	use("onsails/lspkind-nvim")
-	use({
-		"ahmedkhalf/lsp-rooter.nvim",
-		config = function()
-			require("lsp-rooter").setup({})
-		end,
-	})
+	use("ahmedkhalf/lsp-rooter.nvim")
 	use("kabouzeid/nvim-lspinstall") -- idk how to configure it with regular lsp langs
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
@@ -86,9 +81,9 @@ return require("packer").startup(function(use)
 
 	-- Autoformatters
 	use("editorconfig/editorconfig-vim")
-	-- use "sbdchd/neoformat"
 
 	-- Other
+	use("windwp/nvim-autopairs") -- i gonna use it for now, maybe remove later
 	use("terrortylor/nvim-comment")
 	use("ChristianChiarulli/dashboard-nvim")
 	use("akinsho/nvim-toggleterm.lua")
@@ -97,7 +92,4 @@ return require("packer").startup(function(use)
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("Grzanka99/nvim-cursorline")
 	use("lukas-reineke/indent-blankline.nvim")
-
-	-- Testing and TODO
-	-- https://github.com/windwp/nvim-spectre
 end)
