@@ -4,3 +4,4 @@ require("indent_blankline").setup({
 })
 
 vim.cmd("let g:indent_blankline_show_current_context = v:true")
+vim.cmd("let g:indent_blankline_use_treesitter = v:true")
