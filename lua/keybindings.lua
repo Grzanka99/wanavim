@@ -85,3 +85,4 @@ map({ "i", "s" }, "<Tab>", "v:lua.tab_complete()", { expr = true })
 map({ "i", "s" }, "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
+map("n", "<Leader>p", "lua vim.lsp.buf.formatting_seq_sync()")

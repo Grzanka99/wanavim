@@ -3,7 +3,7 @@ local utils = require("utils")
 local autoFormatters = {
 	lsp = {
 		prefix = "BufWritePre",
-		filetypes = { "*.js", "*.ts", "*.jsx", "*.py", "*.c", "*.cpp", "*.vue", "*.lua" },
+		filetypes = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.py", "*.c", "*.cpp", "*.vue", "*.lua", "*.scss", "*.css" },
 		command = "lua vim.lsp.buf.formatting_seq_sync()",
 	},
 }

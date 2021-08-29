@@ -4,6 +4,7 @@ __.lsp = {
 	{ name = "html", enabled = true },
 	{ name = "lua", enabled = true },
 	{ name = "typescript", enabled = true },
+	{ name = "vue", enabled = true },
 }
 
 __.installedColorschemes = {
