@@ -29,7 +29,7 @@ require("compe").setup({
 		nvim_lua = true,
 		tags = true,
 		treesitter = true,
-		tabnine = true,
+		-- tabnine = true,
 	},
 })
 

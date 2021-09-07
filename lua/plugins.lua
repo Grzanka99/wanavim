@@ -38,7 +38,7 @@ return packer.startup(function(use)
 	use("hrsh7th/vim-vsnip-integ")
 	use("rafamadriz/friendly-snippets") -- some snippets set
 	use("ChristianChiarulli/html-snippets") -- some snippets set
-	use({ "tzachar/compe-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-compe" }) --testing
+	-- use({ "tzachar/compe-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-compe" }) --testing
 
 	-- Debugger / Diagnostics
 	use("folke/trouble.nvim")

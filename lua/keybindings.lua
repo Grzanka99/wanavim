@@ -55,6 +55,9 @@ map("n", "<M-.>", ":BufferNext<CR>")
 map("n", "<M-,>", ":BufferPrevious<CR>")
 map("n", "<M-/>", ":BufferClose<CR>")
 
+-- Folding
+-- map({ "n", "v" }, "")
+
 -- Native LSP
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")

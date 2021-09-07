@@ -1,5 +1,5 @@
-require "lspconfig".sumneko_lua.setup {
-    cmd = {"lua-language-server"},
+	require "lspconfig".sumneko_lua.setup {
+	cmd = {"lua-language-server"},
     settings = {
         Lua = {
             runtime = {

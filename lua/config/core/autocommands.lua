@@ -29,6 +29,15 @@ local dashboard = {
 	},
 }
 
+local folds = {
+	autoUnfold = {
+		prefix = "FileType",
+		filetypes = {"*"},
+		command = "normal zR"
+	}
+}
+
 utils.loadAutocommands(autoFormatters)
 utils.loadAutocommands(autoReload)
 utils.loadAutocommands(dashboard)
+utils.loadAutocommands(folds)
