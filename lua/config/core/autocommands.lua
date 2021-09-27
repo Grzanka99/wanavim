@@ -3,7 +3,20 @@ local utils = require("utils")
 local autoFormatters = {
 	lsp = {
 		prefix = "BufWritePre",
-		filetypes = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.py", "*.c", "*.cpp", "*.vue", "*.lua", "*.scss", "*.css" },
+		filetypes = {
+			"*.html",
+			"*.js",
+			"*.ts",
+			"*.jsx",
+			"*.tsx",
+			"*.py",
+			"*.c",
+			"*.cpp",
+			"*.vue",
+			"*.lua",
+			"*.scss",
+			"*.css",
+		},
 		command = "lua vim.lsp.buf.formatting_seq_sync()",
 	},
 }
@@ -32,9 +45,9 @@ local dashboard = {
 local folds = {
 	autoUnfold = {
 		prefix = "FileType",
-		filetypes = {"*"},
-		command = "normal zR"
-	}
+		filetypes = { "*" },
+		command = "normal zR",
+	},
 }
 
 utils.loadAutocommands(autoFormatters)
