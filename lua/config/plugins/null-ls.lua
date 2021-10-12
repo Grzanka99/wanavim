@@ -2,7 +2,7 @@ local null_ls = require("null-ls")
 
 local sources = {
 	null_ls.builtins.formatting.prettier,
-	-- null_ls.builtins.formatting.stylua,
+  null_ls.builtins.formatting.stylua,
 	null_ls.builtins.formatting.clang_format,
 	null_ls.builtins.formatting.eslint_d,
 	null_ls.builtins.formatting.whitespace,
