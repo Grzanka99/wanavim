@@ -90,7 +90,7 @@ return packer.startup(function(use)
 	use("ChristianChiarulli/dashboard-nvim")
 	use("akinsho/nvim-toggleterm.lua")
 	use("folke/todo-comments.nvim")
-	use("folke/which-key.nvim")
+	-- use("folke/which-key.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("Grzanka99/nvim-cursorline")
 	use("lukas-reineke/indent-blankline.nvim")

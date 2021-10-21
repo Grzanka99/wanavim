@@ -83,7 +83,7 @@ map("n", "<Leader>t", ":ToggleTerm<CR>")
 map("i", "<C-Space>", "compe#complete()", { expr = true })
 map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
-map("n", "D", "<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>")
+map("n", "D", "Lspsaga show_line_diagnostics<CD>")
 map({ "i", "s" }, "<Tab>", "v:lua.tab_complete()", { expr = true })
 map({ "i", "s" }, "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 -- usefull

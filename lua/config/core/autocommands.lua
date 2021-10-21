@@ -53,4 +53,4 @@ local folds = {
 utils.loadAutocommands(autoFormatters)
 utils.loadAutocommands(autoReload)
 utils.loadAutocommands(dashboard)
-utils.loadAutocommands(folds)
+-- utils.loadAutocommands(folds)

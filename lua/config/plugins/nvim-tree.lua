@@ -27,7 +27,7 @@ require("nvim-tree").setup({
 		folders = 1,
 		files = 1,
 		folder_arrows = 1,
-		tree_width = 40,
+		tree_width = 30,
 	},
 	ignore = { ".git", "node_modules", ".cache" },
 	quit_on_open = 0,
