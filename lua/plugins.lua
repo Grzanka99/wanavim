@@ -33,9 +33,19 @@ return packer.startup(function(use)
 	})
 
 	-- Autocomplete
-	use("hrsh7th/nvim-compe") -- completion client
+	--
+	-- nvim-cmp
+
+	use("neovim/nvim-lspconfig")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/nvim-cmp")
+
+	-- For vsnip users.
+	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/vim-vsnip")
-	use("hrsh7th/vim-vsnip-integ")
+	use("ray-x/cmp-treesitter")
+
 	use("rafamadriz/friendly-snippets") -- some snippets set
 	use("ChristianChiarulli/html-snippets") -- some snippets set
 	-- use({ "tzachar/compe-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-compe" }) --testing

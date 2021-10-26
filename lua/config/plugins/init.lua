@@ -1,4 +1,5 @@
-require("config.plugins.compe")
+-- require("config.plugins.compe")
+require("config.plugins.cmp")
 require("config.plugins.null-ls")
 require("config.plugins.dashboard")
 require("config.plugins.galaxyline")

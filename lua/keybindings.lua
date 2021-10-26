@@ -80,11 +80,11 @@ map("n", "<Leader>o", ":SymbolsOutline<CR>")
 map("n", "<Leader>t", ":ToggleTerm<CR>")
 
 -- completion, codeinfo
-map("i", "<C-Space>", "compe#complete()", { expr = true })
-map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
+-- map("i", "<C-Space>", "compe#complete()", { expr = true })
+-- map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
 map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
-map({ "i", "s" }, "<Tab>", "v:lua.tab_complete()", { expr = true })
-map({ "i", "s" }, "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
+-- map({ "i", "s" }, "<Tab>", "v:lua.tab_complete()", { expr = true })
+-- map({ "i", "s" }, "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
