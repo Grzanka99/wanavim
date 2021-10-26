@@ -5,6 +5,7 @@ __.lsp = {
 	{ name = "lua", enabled = true },
 	{ name = "typescript", enabled = true },
 	{ name = "vue", enabled = true },
+	{ name = "volar", enabled = false },
 	{ name = "dart", enabled = true },
 }
 
