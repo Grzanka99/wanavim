@@ -50,7 +50,16 @@ local folds = {
 	},
 }
 
+local killEslintD = {
+	killEslintD = {
+		prefix = "BufDelete",
+		filetypes = { "*" },
+		command = "silent exec '!eslint_d stop'",
+	},
+}
+
 utils.loadAutocommands(autoFormatters)
 utils.loadAutocommands(autoReload)
 utils.loadAutocommands(dashboard)
--- utils.loadAutocommands(folds)
+utils.loadAutocommands(killEslintD)
+utils.loadAutocommands(folds) -- testing
