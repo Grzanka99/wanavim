@@ -55,9 +55,6 @@ map("n", "<M-.>", ":BufferNext<CR>")
 map("n", "<M-,>", ":BufferPrevious<CR>")
 map("n", "<M-/>", ":BufferClose<CR>")
 
--- Folding
--- map({ "n", "v" }, "")
-
 -- Native LSP
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
@@ -69,6 +66,7 @@ map("n", "<Leader>da", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>
 map("n", "<Leader>dr", "<cmd>lua require('lspsaga.rename').rename()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
 map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
+map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.formatting_seq_sync()<CR>")
 
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
@@ -80,11 +78,7 @@ map("n", "<Leader>o", ":SymbolsOutline<CR>")
 map("n", "<Leader>t", ":ToggleTerm<CR>")
 
 -- completion, codeinfo
--- map("i", "<C-Space>", "compe#complete()", { expr = true })
--- map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
 map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
--- map({ "i", "s" }, "<Tab>", "v:lua.tab_complete()", { expr = true })
--- map({ "i", "s" }, "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
