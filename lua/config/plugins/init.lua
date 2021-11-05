@@ -1,5 +1,6 @@
 require("config.plugins.cmp")
 require("config.plugins.null-ls")
+require("config.plugins.copilot")
 require("config.plugins.dashboard")
 require("config.plugins.galaxyline")
 require("config.plugins.gitsigns")

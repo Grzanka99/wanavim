@@ -82,3 +82,6 @@ map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
 map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
+
+-- copilot
+-- map("i", "<C-J>", "copilot#Accept<CR>")
