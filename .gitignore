@@ -3,3 +3,4 @@
 plugin/
 undodir/
 .netrwhist
+lua/settings.lua

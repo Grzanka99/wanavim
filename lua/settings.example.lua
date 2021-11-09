@@ -14,7 +14,7 @@ __.formatters = {
 	{ name = "stylua", enabled = true },
 	{ name = "clang_format", enabled = false },
 	{ name = "eslint_d", enabled = true },
-	{ name = "whitespace", enabled = true },
+	{ name = "trim_whitespace", enabled = true },
 }
 
 __.diagnostics = {
