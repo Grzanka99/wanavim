@@ -34,6 +34,8 @@ require("nvim-tree").setup({
 	hide_dotfiles = 1,
 	git_hl = 1,
 	root_folder_modifier = ":t",
+	update_cwd = 1,
+	respect_buf_cwd = 1,
 	allow_resize = 1,
 	auto_ignore_ft = { "startify", "dashboard" },
 	icons = {
