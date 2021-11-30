@@ -23,7 +23,7 @@ return packer.startup(function(use)
 	use("tami5/lspsaga.nvim") -- Floating info
 	use("onsails/lspkind-nvim")
 	use("ahmedkhalf/lsp-rooter.nvim")
-	use("kabouzeid/nvim-lspinstall") -- idk how to configure it with regular lsp langs
+	use("williamboman/nvim-lsp-installer")
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		config = function()
