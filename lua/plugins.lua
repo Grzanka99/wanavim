@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/vim-vsnip")
 	use("ray-x/cmp-treesitter")
+	use("ray-x/lsp_signature.nvim")
 
 	use("rafamadriz/friendly-snippets") -- some snippets set
 	use("ChristianChiarulli/html-snippets") -- some snippets set
