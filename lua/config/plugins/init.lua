@@ -13,7 +13,7 @@ require("config.plugins.treesitter")
 -- require("config.plugins.which-key")
 require("config.plugins.symbols-outline")
 require("config.plugins.diffview")
-require("config.plugins.indent-blankline")
+-- require("config.plugins.indent-blankline")
 require("config.plugins.nvim-comment")
 -- require("config.plugins.dap")
 

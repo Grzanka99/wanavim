@@ -104,5 +104,5 @@ return packer.startup(function(use)
 	-- use("folke/which-key.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("Grzanka99/nvim-cursorline")
-	use("lukas-reineke/indent-blankline.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
 end)
