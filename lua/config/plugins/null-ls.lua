@@ -14,9 +14,6 @@ for _, diagnoser in pairs(__.diagnostics) do
 	end
 end
 
-null_ls.config({ sources = sources })
-
-require("lspconfig")["null-ls"].setup({
-	-- see the nvim-lspconfig documentation for available configuration options
-	on_attach = my_custom_on_attach,
+require("null-ls").setup({
+	sources = sources,
 })
