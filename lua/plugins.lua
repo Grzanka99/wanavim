@@ -24,13 +24,7 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/nvim-lsp-installer")
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		config = function()
-			require("null-ls").config({})
-			require("lspconfig")["null-ls"].setup({})
-		end,
-	})
+	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Autocomplete
 	--
