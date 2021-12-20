@@ -62,4 +62,4 @@ utils.loadAutocommands(autoFormatters)
 utils.loadAutocommands(autoReload)
 utils.loadAutocommands(dashboard)
 utils.loadAutocommands(killEslintD)
-utils.loadAutocommands(folds) -- testing
+-- utils.loadAutocommands(folds) -- testing
