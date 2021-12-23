@@ -70,7 +70,8 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-media-files.nvim")
 
 	-- Status line and bufferline
-	use("glepnir/galaxyline.nvim")
+	-- use("glepnir/galaxyline.nvim")
+	use("nvim-lualine/lualine.nvim")
 	use("romgrk/barbar.nvim")
 
 	-- Colors
