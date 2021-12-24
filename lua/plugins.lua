@@ -29,8 +29,8 @@ return packer.startup(function(use)
 	-- Autocomplete
 	--
 	use("github/copilot.vim")
-	-- nvim-cmp
 
+	-- nvim-cmp
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/nvim-cmp")
@@ -43,12 +43,9 @@ return packer.startup(function(use)
 
 	use("rafamadriz/friendly-snippets") -- some snippets set
 	use("ChristianChiarulli/html-snippets") -- some snippets set
-	-- use({ "tzachar/compe-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-compe" }) --testing
 
 	-- Debugger / Diagnostics
 	use("folke/trouble.nvim")
-	-- use "Pocco81/DAPInstall.nvim"
-	-- use "mfussenegger/nvim-dap"
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -70,7 +67,6 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-media-files.nvim")
 
 	-- Status line and bufferline
-	-- use("glepnir/galaxyline.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("romgrk/barbar.nvim")
 
@@ -84,7 +80,6 @@ return packer.startup(function(use)
 	-- Git
 	use({ "Grzanka99/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("tpope/vim-fugitive")
-	use("itchyny/vim-gitbranch")
 	use("sindrets/diffview.nvim")
 
 	-- Autoformatters
@@ -96,8 +91,6 @@ return packer.startup(function(use)
 	use("ChristianChiarulli/dashboard-nvim")
 	use("akinsho/nvim-toggleterm.lua")
 	use("folke/todo-comments.nvim")
-	-- use("folke/which-key.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("Grzanka99/nvim-cursorline")
-	-- use("lukas-reineke/indent-blankline.nvim")
 end)
