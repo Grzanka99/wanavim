@@ -40,6 +40,11 @@ local dashboard = {
 		filetypes = { "dashboard" },
 		command = "set showtabline=0 | autocmd BufLeave <buffer> set showtabline=2",
 	},
+	indentBlankline = {
+		prefix = "FileType",
+		filetypes = { "dashboard" },
+		command = "silent IndentBlanklineDisable",
+	},
 }
 
 local folds = {

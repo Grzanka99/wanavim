@@ -4,7 +4,12 @@ require("gitsigns").setup({
 		change = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
 		delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
 		topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-		changedelete = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+		changedelete = {
+			hl = "GitSignsChange",
+			text = "│",
+			numhl = "GitSignsChangeNr",
+			linehl = "GitSignsChangeLn",
+		},
 	},
 	numhl = false,
 	linehl = false,
@@ -27,7 +32,7 @@ require("gitsigns").setup({
 	watch_index = {
 		interval = 1000,
 	},
-	current_line_blame = false,
+	current_line_blame = true,
 	sign_priority = 6,
 	update_debounce = 100,
 	status_formatter = nil, -- Use default

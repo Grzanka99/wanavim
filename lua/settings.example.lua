@@ -45,5 +45,8 @@ __.guifont = {
 	size = 12,
 }
 
+__.codestyle = {
+	tab_size = 2,
+}
 -- Set lang
 __.language = "en_US.utf8"
