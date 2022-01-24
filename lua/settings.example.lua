@@ -3,12 +3,12 @@
 -- in this array, you decide which of hand-configured lsp servers
 -- are enabled (lua/lang)
 __.lsp = {
-	{ name = "lspinstall", enabled = true },
+	{ name = "nvimlspinstaller", enabled = true },
 	{ name = "css", enabled = true },
 	{ name = "html", enabled = true },
 	{ name = "lua", enabled = false },
 	{ name = "typescript", enabled = true },
-	{ name = "vue", enabled = false },
+	{ name = "vue", enabled = true },
 	{ name = "volar", enabled = false },
 	{ name = "dart", enabled = false },
 }
@@ -35,6 +35,18 @@ __.installedColorschemes = {
 	{ url = "marko-cerovac/material.nvim", enabled = true },
 }
 
+__.treesitter = {
+	{ name = "javascriptreact", enabled = true },
+	{ name = "javascript", enabled = true },
+	{ name = "typescript", enabled = true },
+	{ name = "typescriptreact", enabled = true },
+	{ name = "css", enabled = true },
+	{ name = "html", enabled = true },
+	{ name = "lua", enabled = true },
+	{ name = "vue", enabled = true },
+	{ name = "scss", enabled = true },
+}
+
 -- set colorscheme
 __.colorscheme = "material"
 vim.g.material_style = "deep ocean"
@@ -47,6 +59,7 @@ __.guifont = {
 
 __.codestyle = {
 	tab_size = 2,
+	expandtab = true,
 }
 -- Set lang
 __.language = "en_US.utf8"
