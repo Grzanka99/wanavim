@@ -17,7 +17,7 @@ local autoFormatters = {
 			"*.scss",
 			"*.css",
 		},
-		command = "lua vim.lsp.buf.formatting_seq_sync()",
+		command = "lua vim.lsp.buf.formatting_sync()",
 	},
 }
 
