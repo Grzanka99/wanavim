@@ -1,6 +1,6 @@
 -- commented options are defaults
 require("lspkind").init({
-	with_text = true,
+	mode = true,
 	symbol_map = {
 		Text = "",
 		Method = "ƒ",
