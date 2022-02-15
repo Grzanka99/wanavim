@@ -7,7 +7,7 @@ for _, lang in pairs(__.treesitter) do
 end
 
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "javascript", "lua" },
+	ensure_installed = installed,
 	highlight = {
 		enable = true, -- false will disable the whole extension
 	},
