@@ -1,7 +1,53 @@
 vim.o.completeopt = "menu,menuone,noselect"
 
 local cmp = require("cmp")
-local lspkind = require("lspkind")
+
+conf = {
+	kind_icons = {
+		Class = " ",
+		Color = " ",
+		Constant = "ﲀ ",
+		Constructor = " ",
+		Enum = "練",
+		EnumMember = " ",
+		Event = " ",
+		Field = " ",
+		File = "",
+		Folder = " ",
+		Function = " ",
+		Interface = "ﰮ ",
+		Keyword = " ",
+		Method = " ",
+		Module = " ",
+		Operator = "",
+		Property = " ",
+		Reference = " ",
+		Snippet = " ",
+		Struct = " ",
+		Text = " ",
+		TypeParameter = " ",
+		Unit = "塞",
+		Value = " ",
+		Variable = " ",
+	},
+	source_names = {
+		nvim_lsp = "(LSP)",
+		emoji = "(Emoji)",
+		path = "(Path)",
+		calc = "(Calc)",
+		cmp_tabnine = "(Tabnine)",
+		vsnip = "(Snippet)",
+		luasnip = "(Snippet)",
+		buffer = "(Buffer)",
+	},
+	duplicates = {
+		buffer = 1,
+		path = 1,
+		nvim_lsp = 0,
+		luasnip = 1,
+	},
+	duplicates_default = 0,
+}
 
 cmp.setup({
 	snippet = {
@@ -34,52 +80,17 @@ cmp.setup({
 		{ name = "treesitter" },
 	}),
 	formatting = {
-		format = lspkind.cmp_format(),
 		fields = { "kind", "abbr", "menu" },
-		kind_icons = {
-			Class = " ",
-			Color = " ",
-			Constant = "ﲀ ",
-			Constructor = " ",
-			Enum = "練",
-			EnumMember = " ",
-			Event = " ",
-			Field = " ",
-			File = "",
-			Folder = " ",
-			Function = " ",
-			Interface = "ﰮ ",
-			Keyword = " ",
-			Method = " ",
-			Module = " ",
-			Operator = "",
-			Property = " ",
-			Reference = " ",
-			Snippet = " ",
-			Struct = " ",
-			Text = " ",
-			TypeParameter = " ",
-			Unit = "塞",
-			Value = " ",
-			Variable = " ",
-		},
-		source_names = {
-			nvim_lsp = "(LSP)",
-			emoji = "(Emoji)",
-			path = "(Path)",
-			calc = "(Calc)",
-			cmp_tabnine = "(Tabnine)",
-			vsnip = "(Snippet)",
-			luasnip = "(Snippet)",
-			buffer = "(Buffer)",
-		},
-		duplicates = {
-			buffer = 1,
-			path = 1,
-			nvim_lsp = 0,
-			luasnip = 1,
-		},
-		duplicates_default = 0,
+		kind_icons = conf.kind_icons,
+		source_icons = conf.source_names,
+		duplicates = conf.duplicates,
+		duplicates_default = conf.duplicates_default,
+		format = function(entry, vim_item)
+			vim_item.kind = conf.kind_icons[vim_item.kind]
+			vim_item.menu = conf.source_names[entry.source.name]
+			vim_item.dup = conf.duplicates[entry.source.name] or conf.duplicates_default
+			return vim_item
+		end,
 	},
 	documentation = {
 		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },

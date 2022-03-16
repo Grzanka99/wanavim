@@ -21,7 +21,6 @@ return packer.startup(function(use)
 	-- LSP
 	use("neovim/nvim-lspconfig") -- lsp config
 	use({ "tami5/lspsaga.nvim", branch = "main" }) -- Floating info
-	use("onsails/lspkind-nvim")
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")

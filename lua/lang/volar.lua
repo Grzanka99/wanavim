@@ -1,4 +1,4 @@
--- local util = require("lspconfig.util")
+local util = require("lspconfig.util")
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -17,7 +17,8 @@ local function get_typescript_server_path(root_dir)
 end
 
 require("lspconfig").volar.setup({
-	filetypes = { "vue" },
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+	cmd = { "volar-server", "--stdio" },
 	init_options = {
 		documentFeatures = {
 			documentFormatting = false,
