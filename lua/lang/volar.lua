@@ -17,7 +17,7 @@ local function get_typescript_server_path(root_dir)
 end
 
 require("lspconfig").volar.setup({
-	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+	filetypes = { "vue" },
 	cmd = { "volar-server", "--stdio" },
 	init_options = {
 		documentFeatures = {
