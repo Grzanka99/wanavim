@@ -24,40 +24,39 @@ return packer.startup(function(use)
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("j-hui/fidget.nvim")
+	use("editorconfig/editorconfig-vim")
 
 	-- Autocomplete
-	--
-	use("github/copilot.vim")
+	-- use("github/copilot.vim")
 
 	-- nvim-cmp
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/nvim-cmp")
 
-	-- For vsnip users.
+	-- snippets
 	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/vim-vsnip")
+
+	-- treesitter
 	use("ray-x/cmp-treesitter")
-	use("ray-x/lsp_signature.nvim")
-
-	use("rafamadriz/friendly-snippets") -- some snippets set
-	use("ChristianChiarulli/html-snippets") -- some snippets set
-
-	-- Debugger / Diagnostics
-	use("folke/trouble.nvim")
-
-	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("Grzanka99/nvim-ts-rainbow")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("windwp/nvim-ts-autotag")
+
+	-- suggestions
+	use("ray-x/lsp_signature.nvim") -- inline suggestions while typing
+
+	-- Debugger / Diagnostics
+	use("folke/trouble.nvim")
 
 	-- Icons
 	use("kyazdani42/nvim-web-devicons") -- for file icons
 
 	-- Explorer
 	use("kyazdani42/nvim-tree.lua") -- sidebar tree
-	use("simrat39/symbols-outline.nvim")
 
 	-- Telescope (searching)
 	use("nvim-lua/popup.nvim")
@@ -69,27 +68,24 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use("romgrk/barbar.nvim")
 
-	-- Colors
-	for _, colorscheme in pairs(__.installedColorschemes) do
-		if colorscheme.enabled then
-			use(colorscheme.url)
-		end
-	end
-
 	-- Git
 	use({ "Grzanka99/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("tpope/vim-fugitive")
 	use("sindrets/diffview.nvim")
 
-	-- Autoformatters
-	use("editorconfig/editorconfig-vim")
-
 	-- Other
-	use("windwp/nvim-autopairs") -- i gonna use it for now, maybe remove later
+	use("windwp/nvim-autopairs")
 	use("terrortylor/nvim-comment")
 	use("ChristianChiarulli/dashboard-nvim")
 	use("akinsho/nvim-toggleterm.lua")
 	use("folke/todo-comments.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("lukas-reineke/indent-blankline.nvim")
+
+	-- Colors
+	for _, colorscheme in pairs(__.installedColorschemes) do
+		if colorscheme.enabled then
+			use(colorscheme.url)
+		end
+	end
 end)
