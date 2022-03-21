@@ -20,7 +20,7 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- lsp config
-	use({ "tami5/lspsaga.nvim", branch = "main" }) -- Floating info
+	use({ "tami5/lspsaga.nvim", branch = "nvim6.0" }) -- Floating info
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -62,7 +62,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-media-files.nvim")
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- Status line and bufferline
 	use("nvim-lualine/lualine.nvim")
