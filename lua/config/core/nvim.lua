@@ -27,3 +27,4 @@ vim.cmd("set undodir=$HOME/.config/nvim/undodir")
 vim.o.termguicolors = true
 vim.o.hidden = true
 vim.cmd("language " .. __.language)
+vim.cmd("set ignorecase")

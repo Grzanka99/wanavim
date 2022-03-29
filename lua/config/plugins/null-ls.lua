@@ -1,4 +1,5 @@
 local null_ls = require("null-ls")
+local util = require "lspconfig".util
 
 local sources = {}
 
@@ -16,4 +17,5 @@ end
 
 require("null-ls").setup({
 	sources = sources,
+	root_dir = util.root_pattern(".null-ls-root", "Makefile", ".git", "node_modules", "tsconfig.json"),
 })
