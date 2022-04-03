@@ -72,8 +72,6 @@ map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.formatting_seq_sync()<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<M-Space>", ":NvimTreeToggle<CR>")
 
-map("n", "<Leader>o", ":SymbolsOutline<CR>")
-
 -- Terminal
 map("n", "<C-T>", ":ToggleTerm<CR>")
 
