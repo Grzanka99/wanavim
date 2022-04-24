@@ -73,7 +73,7 @@ map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<M-Space>", ":NvimTreeToggle<CR>")
 
 -- Terminal
-map("n", "<C-T>", ":ToggleTerm<CR>")
+map("n", "<Leader>tt", ":ToggleTerm<CR>")
 
 -- completion, codeinfo
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")

@@ -28,7 +28,7 @@ return packer.startup(function(use)
 	use("editorconfig/editorconfig-vim")
 
 	-- Autocomplete
-	-- use("github/copilot.vim")
+	use("github/copilot.vim")
 
 	-- nvim-cmp
 	use("hrsh7th/cmp-nvim-lsp")
