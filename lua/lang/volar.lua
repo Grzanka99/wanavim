@@ -40,7 +40,7 @@ require("lspconfig").volar.setup({
 	},
 	config = {
 		on_new_config = function(new_config, new_root_dir)
-			new_config.resolved_capabilities.document_formatting = false
+			new_config.server_capabilities.document_formatting = false
 			new_config.init_options.typescript.serverPath = get_typescript_server_path(new_root_dir)
 		end,
 	},
