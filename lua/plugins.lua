@@ -28,6 +28,8 @@ return packer.startup(function(use)
 	use("j-hui/fidget.nvim")
 	use("editorconfig/editorconfig-vim")
 
+	-- Autocomplete
+
 	-- nvim-cmp
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
