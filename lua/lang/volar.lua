@@ -21,7 +21,7 @@ local function get_typescript_server_path(root_dir)
 
 	local local_tsserverlib = project_root ~= nil
 		and util.path.join(project_root, "node_modules", "typescript", "lib", "tsserverlibrary.js")
-	local global_tsserverlib = "/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib/tsserverlibrary.js"
+	local global_tsserverlib = "/home/cezary/.npm/lib/node_modules/typescript/lib/tsserverlibrary.js"
 
 	if local_tsserverlib and util.path.exists(local_tsserverlib) then
 		return local_tsserverlib
@@ -32,7 +32,7 @@ end
 
 require("lspconfig").volar.setup({
 	filetypes = { "vue" },
-	cmd = { "vue-language-server", "--stdio" },
+	cmd = { "volar-server", "--stdio" },
 	init_options = {
 		documentFeatures = {
 			documentFormatting = false,
