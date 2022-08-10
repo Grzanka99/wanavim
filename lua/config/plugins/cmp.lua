@@ -78,6 +78,7 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "nvim_lua" },
 		{ name = "treesitter" },
+		{ name = "cmp_tabnine" },
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
