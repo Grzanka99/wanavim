@@ -20,7 +20,8 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- lsp config
-	use({ "tami5/lspsaga.nvim", branch = "nvim6.0" }) -- Floating info
+	-- use({ "tami5/lspsaga.nvim", branch = "nvim6.0" }) -- Floating info
+	use({ "tami5/lspsaga.nvim" }) -- Floating info
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -77,7 +78,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("terrortylor/nvim-comment")
 	use("ChristianChiarulli/dashboard-nvim")
-	use("akinsho/nvim-toggleterm.lua")
+	-- use("akinsho/nvim-toggleterm.lua")
 	use("folke/todo-comments.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("lukas-reineke/indent-blankline.nvim")
