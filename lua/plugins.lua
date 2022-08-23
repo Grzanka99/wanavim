@@ -20,8 +20,7 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- lsp config
-	-- use({ "tami5/lspsaga.nvim", branch = "nvim6.0" }) -- Floating info
-	use({ "tami5/lspsaga.nvim" }) -- Floating info
+	use("tami5/lspsaga.nvim") -- Floating info
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -60,7 +59,6 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua") -- sidebar tree
 
 	-- Telescope (searching)
-	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
@@ -72,13 +70,11 @@ return packer.startup(function(use)
 	-- Git
 	use({ "Grzanka99/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("tpope/vim-fugitive")
-	use("sindrets/diffview.nvim")
 
 	-- Other
 	use("windwp/nvim-autopairs")
 	use("terrortylor/nvim-comment")
 	use("ChristianChiarulli/dashboard-nvim")
-	-- use("akinsho/nvim-toggleterm.lua")
 	use("folke/todo-comments.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("lukas-reineke/indent-blankline.nvim")
