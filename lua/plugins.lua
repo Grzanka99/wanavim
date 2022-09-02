@@ -68,7 +68,7 @@ return packer.startup(function(use)
 	use("romgrk/barbar.nvim")
 
 	-- Git
-	use({ "Grzanka99/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
+	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("tpope/vim-fugitive")
 
 	-- Other

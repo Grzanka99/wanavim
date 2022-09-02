@@ -1,5 +1,5 @@
 vim.opt.list = true
-vim.highlight.create("IndentBlanklineIndent1", { guifg = "#4b4b4b", gui = "nocombine" })
+vim.api.nvim_set_hl(0, "IndentBlanklineIndent1", { fg = "#4b4b4b" })
 
 require("indent_blankline").setup({
 	show_current_context = true,
