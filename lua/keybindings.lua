@@ -62,20 +62,14 @@ map("n", "<Leader>da", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>
 map("n", "<Leader>dr", "<cmd>lua require('lspsaga.rename').rename()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
 map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
-map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.formatting_seq_sync()<CR>")
+map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.format()<CR>")
 
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<M-Space>", ":NvimTreeToggle<CR>")
-
--- Terminal
-map("n", "<Leader>tt", ":ToggleTerm<CR>")
 
 -- completion, codeinfo
 map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
 map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
-
--- copilot
--- map("i", "<C-J>", "copilot#Accept<CR>")
