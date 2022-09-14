@@ -28,20 +28,16 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Move lines up/down
-map({ "n", "v" }, "<M-j>", ":m .+1<CR>==")
-map({ "n", "v" }, "<M-k>", ":m .-2<CR>==")
-map("i", "<M-j>", "<Esc>:m .+1<CR>==")
-map("i", "<M-k>", "<Esc>:m .-2<CR>==")
-
-map({ "n", "v" }, "<M-down>", ":m .+1<CR>==")
-map({ "n", "v" }, "<M-up>", ":m .-2<CR>==")
-map("i", "<M-down>", "<Esc>:m .+1<CR>==")
-map("i", "<M-up>", "<Esc>:m .-2<CR>==")
+map({ "v" }, "<M-j>", ":m'>+<CR>gv=gv")
+map({ "v" }, "<M-k>", ":m-2<CR>gv=gv")
+map("n", "<M-j>", ":m .+1<CR>==")
+map("n", "<M-k>", ":m .-2<CR>==")
 
 -- Telescope (searching)
 map("n", "<Leader>ff", ":Telescope find_files<CR>")
 map("n", "<Leader>fb", ":Telescope buffers<CR>")
 map("n", "<Leader>fg", ":Telescope live_grep<CR>")
+map("n", "<Leader>fs", ":Telescope lsp_workspace_symbols")
 
 -- WINDOW / WORKSPACE NAVIAGATION AND MODIFICATION
 -- Better window navigation
