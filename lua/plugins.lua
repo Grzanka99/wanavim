@@ -45,6 +45,12 @@ return packer.startup(function(use)
 	use("Grzanka99/nvim-ts-rainbow")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("windwp/nvim-ts-autotag")
+	use({
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = function()
+			require("lsp_lines").setup()
+		end,
+	})
 
 	-- suggestions
 	use("ray-x/lsp_signature.nvim") -- inline suggestions while typing

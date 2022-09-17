@@ -37,7 +37,7 @@ map("n", "<M-k>", ":m .-2<CR>==")
 map("n", "<Leader>ff", ":Telescope find_files<CR>")
 map("n", "<Leader>fb", ":Telescope buffers<CR>")
 map("n", "<Leader>fg", ":Telescope live_grep<CR>")
-map("n", "<Leader>fs", ":Telescope lsp_workspace_symbols")
+map("n", "<Leader>fs", ":Telescope lsp_document_symbols<CR>")
 
 -- WINDOW / WORKSPACE NAVIAGATION AND MODIFICATION
 -- Better window navigation
@@ -63,6 +63,7 @@ map("n", "<Leader>dr", "<cmd>lua require('lspsaga.rename').rename()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
 map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
 map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.format()<CR>")
+map("", "<Leader>dl", "<cmd>lua require('lsp_lines').toggle()<CR>")
 
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
