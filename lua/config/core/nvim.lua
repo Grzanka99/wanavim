@@ -1,6 +1,6 @@
 vim.syntax_on = true
 vim.wo.number = true
-vim.wo.relativenumber = true
+-- vim.wo.relativenumber = true
 vim.bo.tabstop = __.codestyle.tab_size
 vim.bo.softtabstop = __.codestyle.tab_size
 vim.bo.shiftwidth = __.codestyle.tab_size
