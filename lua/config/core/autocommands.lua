@@ -17,7 +17,8 @@ local autoFormatters = {
       "*.scss",
       "*.css",
       "*.svelte",
-      "*.go"
+      "*.go",
+      "*.json"
     },
     command = "lua vim.lsp.buf.format({ timeout_ms = 5000 })",
   },
