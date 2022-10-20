@@ -27,6 +27,8 @@ return packer.startup(function(use)
 	use("j-hui/fidget.nvim")
 	use("editorconfig/editorconfig-vim")
 
+	use("RRethy/vim-illuminate")
+
 	-- Autocomplete
 
 	-- nvim-cmp

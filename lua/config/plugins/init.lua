@@ -10,6 +10,7 @@ require("config.plugins.telescope")
 require("config.plugins.treesitter")
 require("config.plugins.nvim-comment")
 require("config.plugins.indent-blankline")
+require("config.plugins.illuminate")
 
 -- Just loaders, without settings
 
