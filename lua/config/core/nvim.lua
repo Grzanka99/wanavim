@@ -28,3 +28,4 @@ vim.o.termguicolors = true
 vim.o.hidden = true
 vim.cmd("language " .. __.language)
 vim.cmd("set ignorecase")
+vim.cmd("set so=10")
