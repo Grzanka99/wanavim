@@ -81,6 +81,9 @@ return packer.startup(function(use)
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- Specific langs setups
+	use("jose-elias-alvarez/typescript.nvim")
+
 	-- Colors
 	for _, colorscheme in pairs(__.installedColorschemes) do
 		if colorscheme.enabled then

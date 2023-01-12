@@ -1,7 +1,9 @@
 local null_ls = require("null-ls")
 local util = require "lspconfig".util
 
-local sources = {}
+local sources = {
+	require("typescript.extensions.null-ls.code-actions")
+}
 
 for _, formatter in pairs(__.formatters) do
 	if formatter.enabled then
