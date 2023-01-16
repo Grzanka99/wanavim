@@ -1,29 +1,5 @@
 local utils = require("utils")
 
-local autoFormatters = {
-	lsp = {
-		prefix = "BufWritePre",
-		filetypes = {
-			"*.html",
-			"*.js",
-			"*.ts",
-			"*.jsx",
-			"*.tsx",
-			"*.py",
-			"*.c",
-			"*.cpp",
-			"*.vue",
-			"*.lua",
-			"*.scss",
-			"*.css",
-			"*.svelte",
-			"*.go",
-			"*.json",
-		},
-		command = "lua vim.lsp.buf.format({ timeout_ms = 5000 })",
-	},
-}
-
 local autoReload = {
 	autoreload = {
 		prefix = "FocusGained",
@@ -66,7 +42,6 @@ local killEslintD = {
 	},
 }
 
-utils.loadAutocommands(autoFormatters)
 utils.loadAutocommands(autoReload)
 utils.loadAutocommands(dashboard)
 utils.loadAutocommands(killEslintD)
