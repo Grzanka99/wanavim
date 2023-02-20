@@ -22,7 +22,8 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- lsp config
 	use("tami5/lspsaga.nvim") -- Floating info
 	use("ahmedkhalf/lsp-rooter.nvim")
-	use("williamboman/nvim-lsp-installer")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("j-hui/fidget.nvim")
 	use("editorconfig/editorconfig-vim")

@@ -1,7 +1,7 @@
 local utils = require("utils")
 
-utils.loadLanguages(__.lsp)
-
+-- utils.loadLanguages(__.lsp)
+--
 vim.diagnostic.config({
 	virtual_text = false,
 })
