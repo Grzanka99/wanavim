@@ -1,20 +1,20 @@
 -- Map helper function, can get array of modes and also has some defaults
 local function map(modes, keymap, cmd, opt)
-	opt = opt or {}
+  opt = opt or {}
 
-	opt.noremap = opt.noremap or true
-	opt.silent = opt.noremap or true
+  opt.noremap = opt.noremap or true
+  opt.silent = opt.noremap or true
 
-	if type(modes) == "string" then
-		vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
-		return true
-	end
+  if type(modes) == "string" then
+    vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
+    return true
+  end
 
-	for _, mode in pairs(modes) do
-		vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
-	end
+  for _, mode in pairs(modes) do
+    vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
+  end
 
-	return true
+  return true
 end
 
 vim.g.mapleader = " "
@@ -74,3 +74,6 @@ map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
 map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
+
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
