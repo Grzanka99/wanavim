@@ -35,7 +35,6 @@ conf = {
 		emoji = "(Emoji)",
 		path = "(Path)",
 		calc = "(Calc)",
-		cmp_tabnine = "(Tabnine)",
 		vsnip = "(Snippet)",
 		luasnip = "(Snippet)",
 		buffer = "(Buffer)",
@@ -78,7 +77,6 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "nvim_lua" },
 		{ name = "treesitter" },
-		{ name = "cmp_tabnine" },
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },

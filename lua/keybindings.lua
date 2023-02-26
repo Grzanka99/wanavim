@@ -77,3 +77,4 @@ map("n", "<Leader>w", ":w<CR>")
 
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("x", "p", '"_dP') -- do not replace clipboard
