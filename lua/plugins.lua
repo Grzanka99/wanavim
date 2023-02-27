@@ -20,7 +20,7 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- lsp config
-	use("tami5/lspsaga.nvim") -- Floating info
+	use("glepnir/lspsaga.nvim") -- Floating info
 	use("ahmedkhalf/lsp-rooter.nvim")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
@@ -82,7 +82,6 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Specific langs setups
-	use("jose-elias-alvarez/typescript.nvim")
 
 	-- Colors
 	for _, colorscheme in pairs(__.installedColorschemes) do

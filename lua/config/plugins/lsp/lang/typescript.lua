@@ -23,7 +23,6 @@ local function filterReactDTS(value)
 end
 
 local function setup_function()
-	require("typescript").setup({})
 	require("lspconfig").tsserver.setup({
 		on_attach = function(client)
 			client.server_capabilities.documentFormattingProvider = false

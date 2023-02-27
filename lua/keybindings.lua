@@ -1,20 +1,20 @@
 -- Map helper function, can get array of modes and also has some defaults
 local function map(modes, keymap, cmd, opt)
-  opt = opt or {}
+	opt = opt or {}
 
-  opt.noremap = opt.noremap or true
-  opt.silent = opt.noremap or true
+	opt.noremap = opt.noremap or true
+	opt.silent = opt.noremap or true
 
-  if type(modes) == "string" then
-    vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
-    return true
-  end
+	if type(modes) == "string" then
+		vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
+		return true
+	end
 
-  for _, mode in pairs(modes) do
-    vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
-  end
+	for _, mode in pairs(modes) do
+		vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
+	end
 
-  return true
+	return true
 end
 
 vim.g.mapleader = " "
@@ -55,11 +55,7 @@ map("n", "<M-/>", ":BufferClose<CR>")
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-map("n", "<Leader>gr", ":Trouble lsp_references<CR>")
 map("n", "<Leader>gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-map("n", "<Leader>da", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
--- map("n", "<Leader>dd", "<cmd>lua require('lspsaga.provider').preview_definition()<CR>")
-map("n", "<Leader>dr", "<cmd>lua require('lspsaga.rename').rename()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
 map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
 map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.format()<CR>")
@@ -69,9 +65,15 @@ map("", "<Leader>dl", "<cmd>lua require('lsp_lines').toggle()<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<M-Space>", ":NvimTreeToggle<CR>")
 
--- completion, codeinfo
-map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")
+-- LSPSaga
+map("n", "K", ":Lspsaga hover_doc<CR>")
 map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
+map("n", "<Leader>da", ":Lspsaga code_action<CR>")
+map("n", "<Leader>dr", ":Lspsaga rename<CR>")
+map("n", "<Leader>dp", ":Lspsaga peek_definition<CR>")
+map("n", "<Leader>df", ":Lspsaga lsp_finder<CR>")
+map("n", "<Leader>o", ":Lspsaga outline<CR>")
+
 -- usefull
 map("n", "<Leader>w", ":w<CR>")
 

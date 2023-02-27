@@ -4,6 +4,9 @@ for _, lang in pairs(__.treesitter) do
 	if lang.enabled then
 		table.insert(installed, lang.name)
 	end
+	-- for lspsaga
+	table.insert(installed, "markdown")
+	table.insert(installed, "markdown_inline")
 end
 
 require("nvim-treesitter.configs").setup({
