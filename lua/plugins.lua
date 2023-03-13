@@ -76,7 +76,10 @@ return packer.startup(function(use)
 	-- Other
 	use("windwp/nvim-autopairs")
 	use("terrortylor/nvim-comment")
-	use("ChristianChiarulli/dashboard-nvim")
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
 	use("folke/todo-comments.nvim")
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("lukas-reineke/indent-blankline.nvim")
