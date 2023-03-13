@@ -17,8 +17,6 @@ local function get_typescript_server_path(root_dir)
 	end
 end
 
--- grep -cow vue package.json
-
 local function detectVueProjectAndControllTakeoverMode()
 	local isCorrectProjectType = utils.captureShell('[ -f "package.json" ] && echo 1 || echo 0')
 

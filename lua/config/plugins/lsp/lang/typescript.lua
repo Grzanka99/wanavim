@@ -1,3 +1,5 @@
+local utils = require("utils")
+
 local function filter(arr, fn)
 	if type(arr) ~= "table" then
 		return arr
@@ -22,8 +24,27 @@ local function filterReactDTS(value)
 	return string.match(path, "react/index.d.ts") == nil
 end
 
+local default_filetypes =
+	{ "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" }
+
+local function disableForVueProject()
+	local isCorrectProjectType = utils.captureShell('[ -f "package.json" ] && echo 1 || echo 0')
+
+	if not tonumber(isCorrectProjectType) then
+		return default_filetypes
+	else
+		local isVue = utils.captureShell("grep -cow vue package.json")
+		if tonumber(isVue) and tonumber(isVue) > 0 then
+			return { "none" }
+		end
+	end
+
+	return default_filetypes
+end
+
 local function setup_function()
 	require("lspconfig").tsserver.setup({
+		filetypes = disableForVueProject(),
 		on_attach = function(client)
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false
