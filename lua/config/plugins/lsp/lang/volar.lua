@@ -1,12 +1,13 @@
 local util = require("lspconfig.util")
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local utils = require("utils")
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local function get_typescript_server_path(root_dir)
 	local project_root = util.find_node_modules_ancestor(root_dir)
 
 	local local_tsserverlib = project_root ~= nil
-			and util.path.join(project_root, "node_modules", "typescript", "lib", "tsserverlibrary.js")
+		and util.path.join(project_root, "node_modules", "typescript", "lib", "tsserverlibrary.js")
 	local global_tsserverlib = "~/.npm/lib/node_modules/typescript/lib/tsserverlibrary.js"
 
 	if local_tsserverlib and util.path.exists(local_tsserverlib) then
@@ -16,9 +17,20 @@ local function get_typescript_server_path(root_dir)
 	end
 end
 
+-- grep -cow vue package.json
+
+local function detectVueProjectAndControllTakeoverMode()
+	local isVue = utils.captureShell("grep -cow vue package.json")
+	if tonumber(isVue) > 0 then
+		return { "vue", "typescript" }
+	end
+
+	return { "vue" }
+end
+
 local function setup_function()
 	require("lspconfig").volar.setup({
-		filetypes = { "vue" },
+		filetypes = detectVueProjectAndControllTakeoverMode(),
 		cmd = { "vue-language-server", "--stdio" },
 		init_options = {
 			documentFeatures = {
@@ -28,7 +40,7 @@ local function setup_function()
 		config = {
 			on_new_config = function(new_config, new_root_dir)
 				new_config.server_capabilities.document_formatting = false
-				new_config.init_options.typescript.serverPath = get_typescript_server_path(new_root_dir)
+				new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
 			end,
 		},
 	})
