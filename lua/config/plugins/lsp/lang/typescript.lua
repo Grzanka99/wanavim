@@ -31,12 +31,30 @@ local function disableForVueProject()
 	local isCorrectProjectType = utils.captureShell('[ -f "package.json" ] && echo 1 || echo 0')
 
 	if not tonumber(isCorrectProjectType) then
-		return default_filetypes
+		return 1
 	else
 		local isVue = utils.captureShell("grep -cow vue package.json")
 		if tonumber(isVue) and tonumber(isVue) > 0 then
-			return { "none" }
+			return 1
 		end
+	end
+
+	return 0
+end
+
+local function disableForDenoProject()
+	local isCorrectProjectType = utils.captureShell('[ -f "deno.jsonc" ] && echo 1 || echo 0')
+
+	if not tonumber(isCorrectProjectType) then
+		return 1
+	else
+		return 0
+	end
+end
+
+local function checkFileTypes()
+	if not disableForVueProject() or not disableForDenoProject() then
+		return { "none" }
 	end
 
 	return default_filetypes
@@ -44,7 +62,7 @@ end
 
 local function setup_function()
 	require("lspconfig").tsserver.setup({
-		filetypes = disableForVueProject(),
+		filetypes = checkFileTypes(),
 		on_attach = function(client)
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false

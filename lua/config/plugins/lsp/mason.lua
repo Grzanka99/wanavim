@@ -28,4 +28,9 @@ mason_lspconfig.setup_handlers({
 	["html"] = setup_handlers.html,
 	["tsserver"] = setup_handlers.typescript,
 	["volar"] = setup_handlers.volar,
+	["denols"] = setup_handlers.deno,
+})
+
+require("mason-null-ls").setup({
+	ensure_installed = { "prettier", "eslint", "deno_fmt" },
 })
