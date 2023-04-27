@@ -1,4 +1,4 @@
-local utils = require("utils");
+local utils = require("utils")
 
 local default_filetypes = {
 	"javascript",
@@ -10,26 +10,26 @@ local default_filetypes = {
 }
 
 local function disableForNonDenoProject()
-  local isDenoProject = utils.captureShell('[ -f "deno.jsonc" ] && echo 1 || echo 0')
+	local isDenoProject = utils.captureShell('[ -f "deno.jsonc" ] && echo 1 || echo 0')
 
-  if tonumber(isDenoProject) then
-    return 0
-  end
+	if tonumber(isDenoProject) > 0 then
+		return false
+	end
 
-  return 1
+	return true
 end
 
 local function checkFileTypes()
-  if disableForNonDenoProject() then
-    return {"none"}
-  end
+	if disableForNonDenoProject() then
+		return { "none" }
+	end
 
-  return default_filetypes;
+	return default_filetypes
 end
 
 local function setup_function()
 	require("lspconfig").denols.setup({
-	  filetypes = checkFileTypes()
+		filetypes = checkFileTypes(),
 	})
 end
 

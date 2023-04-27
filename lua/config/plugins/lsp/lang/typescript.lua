@@ -30,30 +30,30 @@ local default_filetypes =
 local function disableForVueProject()
 	local isCorrectProjectType = utils.captureShell('[ -f "package.json" ] && echo 1 || echo 0')
 
-	if not tonumber(isCorrectProjectType) then
-		return 1
+	if tonumber(isCorrectProjectType) == 0 then
+		return true
 	else
 		local isVue = utils.captureShell("grep -cow vue package.json")
 		if tonumber(isVue) and tonumber(isVue) > 0 then
-			return 1
+			return true
 		end
 	end
 
-	return 0
+	return false
 end
 
 local function disableForDenoProject()
 	local isCorrectProjectType = utils.captureShell('[ -f "deno.jsonc" ] && echo 1 || echo 0')
 
 	if not tonumber(isCorrectProjectType) then
-		return 1
+		return true
 	else
-		return 0
+		return false
 	end
 end
 
 local function checkFileTypes()
-	if not disableForVueProject() or not disableForDenoProject() then
+	if disableForVueProject() or disableForDenoProject() then
 		return { "none" }
 	end
 
