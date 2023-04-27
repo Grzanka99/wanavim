@@ -58,7 +58,7 @@ map("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 map("n", "<Leader>gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 map("n", "<Leader>dt", ":TroubleToggle<CR>")
 map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
-map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.format()<CR>")
+-- map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.format()<CR>")
 map("", "<Leader>dl", "<cmd>lua require('lsp_lines').toggle()<CR>")
 
 -- NvimTree
