@@ -45,7 +45,7 @@ end
 local function disableForDenoProject()
 	local isCorrectProjectType = utils.captureShell('[ -f "deno.jsonc" ] && echo 1 || echo 0')
 
-	if not tonumber(isCorrectProjectType) then
+	if tonumber(isCorrectProjectType) > 0 then
 		return true
 	else
 		return false
@@ -53,6 +53,7 @@ local function disableForDenoProject()
 end
 
 local function checkFileTypes()
+	print(disableForDenoProject())
 	if disableForVueProject() or disableForDenoProject() then
 		return { "none" }
 	end
