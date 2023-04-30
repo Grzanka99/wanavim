@@ -25,7 +25,7 @@ local function detectVueProjectAndControllTakeoverMode()
 	else
 		local isVue = utils.captureShell("grep -cow vue package.json")
 		if tonumber(isVue) and tonumber(isVue) > 0 then
-			return { "vue", "typescript" }
+			return { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" }
 		end
 	end
 
