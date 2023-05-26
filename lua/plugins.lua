@@ -72,7 +72,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
-	use("tpope/vim-fugitive")
+	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
 
 	-- Other
 	use("windwp/nvim-autopairs")
