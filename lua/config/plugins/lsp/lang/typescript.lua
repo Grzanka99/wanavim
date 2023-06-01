@@ -53,7 +53,6 @@ local function disableForDenoProject()
 end
 
 local function checkFileTypes()
-	print(disableForDenoProject())
 	if disableForVueProject() or disableForDenoProject() then
 		return { "none" }
 	end
