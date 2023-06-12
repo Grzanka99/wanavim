@@ -38,6 +38,7 @@ map("n", "<Leader>ff", ":Telescope find_files<CR>")
 map("n", "<Leader>fb", ":Telescope buffers<CR>")
 map("n", "<Leader>fg", ":Telescope live_grep<CR>")
 map("n", "<Leader>fs", ":Telescope lsp_document_symbols<CR>")
+map("n", "<Leader>dt", ":Telescope diagnostics<CR>")
 
 -- WINDOW / WORKSPACE NAVIAGATION AND MODIFICATION
 -- Better window navigation
@@ -53,13 +54,7 @@ map("n", "<M-/>", ":BufferClose<CR>")
 
 -- Native LSP
 map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-map("n", "<Leader>gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-map("n", "<Leader>dt", ":TroubleToggle<CR>")
-map("n", "<Leader>di", ":Trouble lsp_workspace_diagnostics<CR>")
--- map({ "n", "v" }, "<Leader>df", ":lua vim.lsp.buf.format()<CR>")
-map("", "<Leader>dl", "<cmd>lua require('lsp_lines').toggle()<CR>")
 
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
@@ -73,6 +68,9 @@ map("n", "<Leader>dr", ":Lspsaga rename<CR>")
 map("n", "<Leader>dp", ":Lspsaga peek_definition<CR>")
 map("n", "<Leader>df", ":Lspsaga lsp_finder<CR>")
 map("n", "<Leader>o", ":Lspsaga outline<CR>")
+map("n", "gd", ":Lspsaga goto_definition<CR>")
+
+map("n", "<Leader>gh", ":Gitsigns preview_hunk_inline<CR>")
 
 -- usefull
 map("n", "<Leader>w", ":w<CR>")

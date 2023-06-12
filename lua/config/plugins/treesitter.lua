@@ -16,7 +16,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = { enable = { "javascriptreact" } },
 	autotag = { enable = true },
-	rainbow = { enable = true },
 	context_commentstring = {
 		enable = true,
 		config = {

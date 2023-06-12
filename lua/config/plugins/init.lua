@@ -14,5 +14,4 @@ require("config.plugins.neogit")
 
 require("colorizer").setup()
 require("todo-comments").setup()
-require("trouble").setup()
 require("nvim-autopairs").setup()

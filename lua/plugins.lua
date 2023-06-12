@@ -20,8 +20,8 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- lsp config
-	use("glepnir/lspsaga.nvim") -- Floating info
-	use("ahmedkhalf/lsp-rooter.nvim")
+	use("nvimdev/lspsaga.nvim") -- Floating info
+	use("ahmedkhalf/project.nvim")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -45,7 +45,6 @@ return packer.startup(function(use)
 	-- treesitter
 	use("ray-x/cmp-treesitter")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("Grzanka99/nvim-ts-rainbow")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("windwp/nvim-ts-autotag")
 
@@ -53,7 +52,6 @@ return packer.startup(function(use)
 	use("ray-x/lsp_signature.nvim") -- inline suggestions while typing
 
 	-- Debugger / Diagnostics
-	use("folke/trouble.nvim")
 
 	-- Icons
 	use("kyazdani42/nvim-web-devicons") -- for file icons
