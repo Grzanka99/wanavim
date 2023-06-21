@@ -31,13 +31,13 @@ local conf = {
 		Variable = " ",
 	},
 	source_names = {
-		nvim_lsp = "(LSP)",
-		emoji = "(Emoji)",
-		path = "(Path)",
-		calc = "(Calc)",
-		vsnip = "(Snippet)",
-		luasnip = "(Snippet)",
-		buffer = "(Buffer)",
+		nvim_lsp = "[LSP]",
+		emoji = "[Emoji]",
+		path = "[Path]",
+		calc = "[Calc]",
+		vsnip = "[Snippet]",
+		luasnip = "[Snippet]",
+		buffer = "[Buffer]",
 	},
 	duplicates = {
 		buffer = 0,
@@ -55,14 +55,9 @@ cmp.setup({
 		end,
 	},
 	mapping = {
-		-- ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-		-- ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<Down>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 		["<Up>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-		-- ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-		-- ["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
-		-- ["<C-e>"] = cmp.mapping.close(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
@@ -79,13 +74,13 @@ cmp.setup({
 		{ name = "treesitter" },
 	}),
 	formatting = {
-		fields = { "kind", "abbr", "menu" },
-		-- kind_icons = conf.kind_icons,
+		fields = { "menu", "abbr", "kind" },
+		kind_icons = conf.kind_icons,
 		source_icons = conf.source_names,
 		duplicates = conf.duplicates,
 		duplicates_default = conf.duplicates_default,
 		format = function(entry, vim_item)
-			vim_item.kind = conf.kind_icons[vim_item.kind]
+			vim_item.kind = string.format("%s %s", conf.kind_icons[vim_item.kind], vim_item.kind)
 			vim_item.menu = conf.source_names[entry.source.name]
 			vim_item.dup = conf.duplicates[entry.source.name] or conf.duplicates_default
 			return vim_item
