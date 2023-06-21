@@ -2,7 +2,7 @@ vim.o.completeopt = "menu,menuone,noselect"
 
 local cmp = require("cmp")
 
-conf = {
+local conf = {
 	kind_icons = {
 		Class = " ",
 		Color = " ",
@@ -40,10 +40,10 @@ conf = {
 		buffer = "(Buffer)",
 	},
 	duplicates = {
-		buffer = 1,
-		path = 1,
+		buffer = 0,
+		path = 0,
 		nvim_lsp = 0,
-		luasnip = 1,
+		luasnip = 0,
 	},
 	duplicates_default = 0,
 }
@@ -55,14 +55,14 @@ cmp.setup({
 		end,
 	},
 	mapping = {
-		["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-		["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+		-- ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+		-- ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<Down>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 		["<Up>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-		["<C-d>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		-- ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		-- ["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.close(),
+		-- ["<C-e>"] = cmp.mapping.close(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
@@ -80,7 +80,7 @@ cmp.setup({
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
-		kind_icons = conf.kind_icons,
+		-- kind_icons = conf.kind_icons,
 		source_icons = conf.source_names,
 		duplicates = conf.duplicates,
 		duplicates_default = conf.duplicates_default,
@@ -93,7 +93,7 @@ cmp.setup({
 	},
 	window = {
 		documentation = {
-			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+			border = { "⌜", " ", "⌝", " ", "⌟", " ", "⌞", " " },
 		},
 	},
 })
