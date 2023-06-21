@@ -73,6 +73,7 @@ local function setup_function()
 		},
 		handlers = {
 			["textDocument/definition"] = function(err, result, method, ...)
+				print("hey there?")
 				if vim.tbl_islist(result) and #result > 1 then
 					local filtered_result = filter(result, filterReactDTS)
 					return vim.lsp.handlers["textDocument/definition"](err, filtered_result, method, ...)

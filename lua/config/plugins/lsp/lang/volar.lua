@@ -1,7 +1,5 @@
 local util = require("lspconfig.util")
-local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local utils = require("utils")
-capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local function get_typescript_server_path(root_dir)
 	local project_root = util.find_node_modules_ancestor(root_dir)

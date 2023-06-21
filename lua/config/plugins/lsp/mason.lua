@@ -24,10 +24,10 @@ mason_lspconfig.setup_handlers({
 	function(server_name)
 		require("lspconfig")[server_name].setup({})
 	end,
-	["cssls"] = setup_handlers.css,
-	["html"] = setup_handlers.html,
+	-- ["cssls"] = setup_handlers.css,
+	-- ["html"] = setup_handlers.html,
 	["tsserver"] = setup_handlers.typescript,
-	["volar"] = setup_handlers.volar,
+	-- ["volar"] = setup_handlers.volar,
 	["denols"] = setup_handlers.deno,
 })
 

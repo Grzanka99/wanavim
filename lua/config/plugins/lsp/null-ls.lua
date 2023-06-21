@@ -32,6 +32,7 @@ require("null-ls").setup({
 						filter = function(client)
 							return client.name == "null-ls"
 						end,
+						async = true,
 					})
 				end,
 			})
