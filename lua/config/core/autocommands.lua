@@ -17,4 +17,4 @@ local killEslintD = {
 }
 
 utils.loadAutocommands(autoReload)
-utils.loadAutocommands(killEslintD)
+-- utils.loadAutocommands(killEslintD)

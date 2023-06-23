@@ -48,9 +48,6 @@ return packer.startup(function(use)
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("windwp/nvim-ts-autotag")
 
-	-- suggestions
-	use("ray-x/lsp_signature.nvim") -- inline suggestions while typing
-
 	-- Debugger / Diagnostics
 
 	-- Icons

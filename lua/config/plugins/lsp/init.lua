@@ -5,5 +5,4 @@ require("config.plugins.lsp.null-ls")
 require("config.plugins.lsp.lspsaga")
 require("config.plugins.lsp.project")
 
-require("lsp_signature").setup()
 require("fidget").setup({})
