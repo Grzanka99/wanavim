@@ -19,28 +19,36 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- LSP
-	use("neovim/nvim-lspconfig") -- lsp config
-	use("nvimdev/lspsaga.nvim") -- Floating info
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
+				run = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+			{ "jose-elias-alvarez/null-ls.nvim" },
+			{ "jay-babu/mason-null-ls.nvim" },
+			{ "j-hui/fidget.nvim", tag = "legacy" },
+			{ "nvimdev/lspsaga.nvim" },
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
+	})
+
 	use("ahmedkhalf/project.nvim")
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jay-babu/mason-null-ls.nvim")
-	use({ "j-hui/fidget.nvim", tag = "legacy" })
 	use("editorconfig/editorconfig-vim")
-
 	use("RRethy/vim-illuminate")
-
-	-- Autocomplete
-
-	-- nvim-cmp
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/nvim-cmp")
-
-	-- snippets
-	use("hrsh7th/cmp-vsnip")
-	use("hrsh7th/vim-vsnip")
 
 	-- treesitter
 	use("ray-x/cmp-treesitter")
@@ -60,6 +68,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use("ThePrimeagen/harpoon")
 
 	-- Status line and bufferline
 	use("nvim-lualine/lualine.nvim")
@@ -81,7 +90,6 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Navigation
-	use("ThePrimeagen/harpoon")
 
 	-- Colors
 	for _, colorscheme in pairs(__.installedColorschemes) do

@@ -4,11 +4,17 @@ local setup_handlers = require("config.plugins.lsp.lang")
 
 mason.setup()
 
-local function get_ensure_installed()
+local function get_ensure_installed(settingsList, defaultList)
 	local enabledList = {}
-	for _, lang in pairs(__.lsp) do
-		if lang.enabled then
-			table.insert(enabledList, lang.name)
+
+	defaultList = defaultList or {}
+	for _, element in pairs(defaultList) do
+		table.insert(enabledList, element)
+	end
+
+	for _, entity in pairs(settingsList) do
+		if entity.enabled then
+			table.insert(enabledList, entity.name)
 		end
 	end
 
@@ -16,7 +22,7 @@ local function get_ensure_installed()
 end
 
 mason_lspconfig.setup({
-	ensure_installed = get_ensure_installed(),
+	ensure_installed = get_ensure_installed(__.lsp, { "lua_ls" }),
 	automatic_installation = false,
 })
 
@@ -31,6 +37,15 @@ mason_lspconfig.setup_handlers({
 	["denols"] = setup_handlers.deno,
 })
 
+function table.merge(t1, t2)
+	for _, v in ipairs(t2) do
+		table.insert(t1, v)
+	end
+
+	return t1
+end
+
 require("mason-null-ls").setup({
-	ensure_installed = { "prettier", "eslint", "deno_fmt" },
+	ensure_installed = get_ensure_installed(table.merge(__.formatters, __.diagnostics)),
+	automatic_installation = false,
 })
