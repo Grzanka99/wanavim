@@ -38,6 +38,7 @@ map("n", "<Leader>ff", ":Telescope find_files<CR>")
 map("n", "<Leader>fb", ":Telescope buffers<CR>")
 map("n", "<Leader>fg", ":Telescope live_grep<CR>")
 map("n", "<Leader>fs", ":Telescope lsp_document_symbols<CR>")
+map("n", "<Leader>fh", ":Telescope harpoon marks<CR>")
 map("n", "<Leader>dt", ":Telescope diagnostics<CR>")
 
 -- WINDOW / WORKSPACE NAVIAGATION AND MODIFICATION
@@ -78,3 +79,13 @@ map("n", "<Leader>w", ":w<CR>")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 map("x", "p", '"_dP') -- do not replace clipboard
+
+-- harpoon
+
+map("n", "<Leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
+map("n", "<Leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+map("n", "<M-1>", ":lua require('harpoon.ui').nav_file(1)<CR>")
+map("n", "<M-2>", ":lua require('harpoon.ui').nav_file(2)<CR>")
+map("n", "<M-3>", ":lua require('harpoon.ui').nav_file(3)<CR>")
+map("n", "<M-4>", ":lua require('harpoon.ui').nav_file(4)<CR>")
+map("n", "<M-5>", ":lua require('harpoon.ui').nav_file(5)<CR>")

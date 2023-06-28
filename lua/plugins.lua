@@ -80,7 +80,8 @@ return packer.startup(function(use)
 	use("norcalli/nvim-colorizer.lua") -- in-text colors
 	use("lukas-reineke/indent-blankline.nvim")
 
-	-- Specific langs setups
+	-- Navigation
+	use("ThePrimeagen/harpoon")
 
 	-- Colors
 	for _, colorscheme in pairs(__.installedColorschemes) do
