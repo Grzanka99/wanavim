@@ -33,6 +33,7 @@ cmp.setup({
 		["<C-k>"] = cmp_action.select_prev_or_fallback(),
 		["<Tab>"] = cmp_action.luasnip_supertab(),
 		["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
+		["<C-Space>"] = cmp.mapping.complete(),
 	},
 	formatting = {
 		fields = { "menu", "abbr", "kind" },
