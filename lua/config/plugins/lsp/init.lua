@@ -25,7 +25,10 @@ local cmp_action = require("lsp-zero").cmp_action()
 
 cmp.setup({
 	mapping = {
-		["<CR>"] = cmp.mapping.confirm({ select = false }),
+		["<CR>"] = cmp.mapping.confirm({
+			behavior = cmp.ConfirmBehavior.Replace,
+			select = false,
+		}),
 		["<C-j>"] = cmp_action.tab_complete(),
 		["<C-k>"] = cmp_action.select_prev_or_fallback(),
 		["<Tab>"] = cmp_action.luasnip_supertab(),
