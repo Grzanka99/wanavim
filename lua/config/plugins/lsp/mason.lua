@@ -13,7 +13,8 @@ local function get_ensure_installed(settingsList, defaultList)
 	end
 
 	for _, entity in pairs(settingsList) do
-		if entity.enabled then
+		-- NOTE: rustfmt now must be installed via rustup
+		if entity.enabled and (entity.name ~= "rustfmt") then
 			table.insert(enabledList, entity.name)
 		end
 	end
