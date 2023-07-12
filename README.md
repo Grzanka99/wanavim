@@ -1,14 +1,16 @@
 # This is my preffered Neovim configuration
 
-This config is strongly inspired by [LunarVim](https://github.com/ChristianChiarulli/LunarVim), but has other file structure, and will be more personal, i guess. We'll see.
+This config ~~is~~ was strongly inspired by
+[LunarVim](https://github.com/ChristianChiarulli/LunarVim),
+
+But now LunarVim is much more mature and this config it's still on very very
+early stage and more personal :D
 
 Requirements:
 
 - NodeJS
 - Python3
 - Neovim
-
-Recommended for gui: [Goneovim](https://github.com/akiyosi/goneovim)
 
 Example installation:
 
