@@ -4,4 +4,9 @@ require("lspsaga").setup({
 			toggle_or_open = "<CR>",
 		},
 	},
+	outline = {
+		keys = {
+			toggle_or_jump = "<CR>",
+		},
+	},
 })

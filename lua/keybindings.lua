@@ -68,6 +68,7 @@ map("n", "<Leader>da", ":Lspsaga code_action<CR>")
 map("n", "<Leader>dr", ":Lspsaga rename<CR>")
 map("n", "<Leader>dp", ":Lspsaga peek_definition<CR>")
 map("n", "<Leader>df", ":Lspsaga finder<CR>")
+map("n", "<Leader>o", ":Lspsaga outline<CR>")
 map("n", "gd", ":Lspsaga goto_definition<CR>")
 
 map("n", "<Leader>gh", ":Gitsigns preview_hunk_inline<CR>")
