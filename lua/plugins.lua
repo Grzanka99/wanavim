@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use("ahmedkhalf/project.nvim")
 	use("editorconfig/editorconfig-vim")
 	use("RRethy/vim-illuminate")
+	use("tpope/vim-sleuth")
 
 	-- treesitter
 	use("ray-x/cmp-treesitter")
