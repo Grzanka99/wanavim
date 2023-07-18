@@ -78,6 +78,7 @@ return packer.startup(function(use)
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "NeogitOrg/neogit", requires = "nvim-lua/plenary.nvim" })
+	use("sindrets/diffview.nvim")
 
 	-- Other
 	use("windwp/nvim-autopairs")
