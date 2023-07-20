@@ -5,17 +5,33 @@ __.lsp = {
 }
 
 __.formatters = {
-	{ name = "deno_fmt", enabled = true },
-	{ name = "prettierd", enabled = true },
-	{ name = "eslint", enabled = false },
-	{ name = "stylua", enabled = true },
-	{ name = "clang_format", enabled = false },
+	{
+		name = "prettierd",
+		enabled = true,
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"javascript",
+			"javascriptreact",
+		},
+	},
+	{ name = "prettier", enabled = true, filetypes = { "vue" } },
+	{ name = "stylua", enabled = true, filetypes = { "lua" } },
 }
 
 __.diagnostics = {
-	{ name = "cspell", enabled = false },
-	{ name = "eslint_d", enabled = true },
-	{ name = "luacheck", enabled = false },
+	{
+		name = "eslint_d",
+		enabled = true,
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"javascript",
+			"javascriptreact",
+			"vue",
+		},
+	},
+	{ name = "luacheck", enabled = true, filetypes = { "lua" } },
 }
 
 __.installedColorschemes = {
