@@ -45,8 +45,3 @@ function table.merge(t1, t2)
 
 	return t1
 end
-
-require("mason-null-ls").setup({
-	ensure_installed = get_ensure_installed(table.merge(__.formatters, __.diagnostics)),
-	automatic_installation = false,
-})

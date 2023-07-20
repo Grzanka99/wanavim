@@ -32,8 +32,8 @@ return packer.startup(function(use)
 				end,
 			},
 			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
-			{ "jose-elias-alvarez/null-ls.nvim" },
-			{ "jay-babu/mason-null-ls.nvim" },
+			-- { "jose-elias-alvarez/null-ls.nvim" },
+			-- { "jay-babu/mason-null-ls.nvim" },
 			{ "j-hui/fidget.nvim", tag = "legacy" },
 			{ "nvimdev/lspsaga.nvim" },
 
@@ -58,6 +58,10 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	-- Debugger / Diagnostics
+	--
+
+	use("mhartington/formatter.nvim")
+	use("mfussenegger/nvim-lint")
 
 	-- Icons
 	use("kyazdani42/nvim-web-devicons") -- for file icons

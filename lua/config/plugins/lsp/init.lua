@@ -1,6 +1,6 @@
 require("config.plugins.lsp.lsp")
 require("config.plugins.lsp.mason")
-require("config.plugins.lsp.null-ls")
+require("config.plugins.lsp.lint_and_format")
 require("config.plugins.lsp.lspsaga")
 require("config.plugins.lsp.project")
 require("fidget").setup({})
@@ -11,7 +11,7 @@ local lsp = require("lsp-zero").preset({
 	},
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
 	lsp.default_keymaps({ buffer = bufnr })
 end)
 
