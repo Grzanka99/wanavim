@@ -13,8 +13,7 @@ local function get_ensure_installed(settingsList, defaultList)
 	end
 
 	for _, entity in pairs(settingsList) do
-		-- NOTE: rustfmt now must be installed via rustup
-		if entity.enabled and (entity.name ~= "rustfmt") then
+		if entity.enabled and not entity.noai then
 			table.insert(enabledList, entity.name)
 		end
 	end
@@ -37,11 +36,3 @@ mason_lspconfig.setup_handlers({
 	["volar"] = setup_handlers.volar,
 	["denols"] = setup_handlers.deno,
 })
-
-function table.merge(t1, t2)
-	for _, v in ipairs(t2) do
-		table.insert(t1, v)
-	end
-
-	return t1
-end

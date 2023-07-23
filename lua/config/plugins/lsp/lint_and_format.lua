@@ -1,4 +1,5 @@
 local builtin_formatters = require("formatter.filetypes")
+
 local formatters_list = {}
 local linters_list = {}
 
@@ -13,9 +14,13 @@ for _, fmt in pairs(__.formatters) do
 			ftname = "any"
 		end
 
-		formatters_list[ftype] = {
-			builtin_formatters[ftname][fmt.name],
-		}
+		if fmt.override then
+			formatters_list[ftype] = fmt.override
+		else
+			formatters_list[ftype] = {
+				builtin_formatters[ftname][fmt.name],
+			}
+		end
 	end
 end
 
