@@ -1,91 +1,72 @@
--- Map helper function, can get array of modes and also has some defaults
-local function map(modes, keymap, cmd, opt)
-	opt = opt or {}
-
-	opt.noremap = opt.noremap or true
-	opt.silent = opt.noremap or true
-
-	if type(modes) == "string" then
-		vim.api.nvim_set_keymap(modes, keymap, cmd, opt)
-		return true
-	end
-
-	for _, mode in pairs(modes) do
-		vim.api.nvim_set_keymap(mode, keymap, cmd, opt)
-	end
-
-	return true
-end
-
 vim.g.mapleader = " "
 
 -- comments
-map({ "n", "v" }, "<Leader>c", ":CommentToggle<CR>", { noremap = true, silent = true })
-map({ "n", "v" }, "<M-c>", ":CommentToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<Leader>c", ":CommentToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<M-c>", ":CommentToggle<CR>", { noremap = true, silent = true })
 
 -- Better tabbing
-map("v", "<", "<gv")
-map("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- Move lines up/down
-map({ "v" }, "<M-j>", ":m'>+<CR>gv=gv")
-map({ "v" }, "<M-k>", ":m-2<CR>gv=gv")
-map("n", "<M-j>", ":m .+1<CR>==")
-map("n", "<M-k>", ":m .-2<CR>==")
+vim.keymap.set({ "v" }, "<M-j>", ":m'>+<CR>gv=gv")
+vim.keymap.set({ "v" }, "<M-k>", ":m-2<CR>gv=gv")
+vim.keymap.set("n", "<M-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<M-k>", ":m .-2<CR>==")
 
 -- Telescope (searching)
-map("n", "<Leader>ff", ":Telescope find_files<CR>")
-map("n", "<Leader>fb", ":Telescope buffers<CR>")
-map("n", "<Leader>fg", ":Telescope live_grep<CR>")
-map("n", "<Leader>fs", ":Telescope lsp_document_symbols<CR>")
-map("n", "<Leader>fh", ":Telescope harpoon marks<CR>")
-map("n", "<Leader>dt", ":Telescope diagnostics<CR>")
+vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<Leader>fb", ":Telescope buffers<CR>")
+vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>")
+vim.keymap.set("n", "<Leader>fs", ":Telescope lsp_document_symbols<CR>")
+vim.keymap.set("n", "<Leader>fh", ":Telescope harpoon marks<CR>")
+vim.keymap.set("n", "<Leader>dt", ":Telescope diagnostics<CR>")
 
 -- WINDOW / WORKSPACE NAVIAGATION AND MODIFICATION
 -- Better window navigation
 
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
 
-map("n", "<M-.>", ":BufferNext<CR>")
-map("n", "<M-,>", ":BufferPrevious<CR>")
-map("n", "<M-/>", ":BufferClose<CR>")
+vim.keymap.set("n", "<M-.>", ":BufferNext<CR>")
+vim.keymap.set("n", "<M-,>", ":BufferPrevious<CR>")
+vim.keymap.set("n", "<M-/>", ":BufferClose<CR>")
 
 -- Native LSP
-map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+vim.keymap.set("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 
 -- NvimTree
-map("n", "<Leader>e", ":NvimTreeToggle<CR>")
-map("n", "<M-Space>", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<M-Space>", ":NvimTreeToggle<CR>")
 
 -- LSPSaga
-map("n", "K", ":Lspsaga hover_doc<CR>")
-map("n", "D", ":Lspsaga show_line_diagnostics<CR>")
-map("n", "<Leader>da", ":Lspsaga code_action<CR>")
-map("n", "<Leader>dr", ":Lspsaga rename<CR>")
-map("n", "<Leader>dp", ":Lspsaga peek_definition<CR>")
-map("n", "<Leader>df", ":Lspsaga finder<CR>")
-map("n", "<Leader>o", ":Lspsaga outline<CR>")
-map("n", "gd", ":Lspsaga goto_definition<CR>")
+vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>")
+vim.keymap.set("n", "D", ":Lspsaga show_line_diagnostics<CR>")
+vim.keymap.set("n", "<Leader>da", ":Lspsaga code_action<CR>")
+vim.keymap.set("n", "<Leader>dr", ":Lspsaga rename<CR>")
+vim.keymap.set("n", "<Leader>dp", ":Lspsaga peek_definition<CR>")
+vim.keymap.set("n", "<Leader>df", ":Lspsaga finder<CR>")
+vim.keymap.set("n", "<Leader>o", ":Lspsaga outline<CR>")
+vim.keymap.set("n", "gd", ":Lspsaga goto_definition<CR>")
 
-map("n", "<Leader>gh", ":Gitsigns preview_hunk_inline<CR>")
+vim.keymap.set("n", "<Leader>gh", ":Gitsigns preview_hunk_inline<CR>")
 
 -- usefull
-map("n", "<Leader>w", ":w<CR>")
+vim.keymap.set("n", "<Leader>w", ":w<CR>")
 
-map("n", "<C-d>", "<C-d>zz")
-map("n", "<C-u>", "<C-u>zz")
-map("x", "p", '"_dP') -- do not replace clipboard
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("x", "p", '"_dP') -- do not replace clipboard
 
 -- harpoon
 
-map("n", "<Leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
-map("n", "<Leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
-map("n", "<M-1>", ":lua require('harpoon.ui').nav_file(1)<CR>")
-map("n", "<M-2>", ":lua require('harpoon.ui').nav_file(2)<CR>")
-map("n", "<M-3>", ":lua require('harpoon.ui').nav_file(3)<CR>")
-map("n", "<M-4>", ":lua require('harpoon.ui').nav_file(4)<CR>")
-map("n", "<M-5>", ":lua require('harpoon.ui').nav_file(5)<CR>")
+vim.keymap.set("n", "<Leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
+vim.keymap.set("n", "<Leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+vim.keymap.set("n", "<M-1>", ":lua require('harpoon.ui').nav_file(1)<CR>")
+vim.keymap.set("n", "<M-2>", ":lua require('harpoon.ui').nav_file(2)<CR>")
+vim.keymap.set("n", "<M-3>", ":lua require('harpoon.ui').nav_file(3)<CR>")
+vim.keymap.set("n", "<M-4>", ":lua require('harpoon.ui').nav_file(4)<CR>")
+vim.keymap.set("n", "<M-5>", ":lua require('harpoon.ui').nav_file(5)<CR>")
