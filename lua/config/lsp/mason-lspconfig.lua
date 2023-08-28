@@ -38,6 +38,11 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["cssls"] = require("lang.css"),
+			["html"] = require("lang.html"),
+			["tsserver"] = require("lang.typescript"),
+			["volar"] = require("lang.volar"),
+			["denols"] = require("lang.deno"),
 		})
 	end,
 }

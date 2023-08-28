@@ -34,9 +34,11 @@ vim.cmd("set undodir=$HOME/.config/nvim/undodir")
 vim.language = __.language
 vim.opt.ignorecase = true
 
-vim.opt.swapfile = false;
-vim.opt.hlsearch = false;
-vim.opt.incsearch = true;
-vim.opt.updatetime = 50;
+vim.opt.swapfile = false
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.updatetime = 50
+
+vim.cmd("let g:nvcode_termcolors=256")
 
 vim.cmd("let g:nvcode_termcolors=256")

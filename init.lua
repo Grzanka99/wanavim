@@ -17,6 +17,7 @@ __ = {
 	treesitter = {},
 }
 
+require("settings")
 require("base")
 require("plugins")
 require("keybindings")
