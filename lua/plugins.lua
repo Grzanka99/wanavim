@@ -11,6 +11,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.mapleader = " "
+
 require("lazy").setup({
 	{ import = "config/colorscheme" },
+	{ import = "config/lsp" },
+	{ import = "config/neotree" },
+	{ import = "config/treesitter" },
+	{ import = "config/telescope" },
+	{ import = "config/nvim-comment" },
 })
