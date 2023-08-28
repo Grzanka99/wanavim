@@ -4,6 +4,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"nvim-tree/nvim-web-devicons",
 	},
+	cmd = "Lspsaga",
 	keys = {
 		{ "K", ":Lspsaga hover_doc<CR>" },
 		{ "D", ":Lspsaga show_line_diagnostics<CR>" },

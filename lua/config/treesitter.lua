@@ -18,20 +18,30 @@ return {
 		"JoosepAlviste/nvim-ts-context-commentstring",
 		"windwp/nvim-ts-autotag",
 	},
-	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = ensure_installed,
-			highlight = {
-				enabled = true,
+	opts = {
+		ensure_installed = ensure_installed,
+		highlight = { enabled = true },
+		indent = { enable = true },
+		autotag = { enable = true },
+		context_commentstring = {
+			enable = true,
+			config = {
+				javascriptreact = { style_element = "{/*%s*/}" },
 			},
-			indent = { enable = { "javascriptreact" } },
-			autotag = { enable = true },
-			context_commentstring = {
-				enable = true,
-				config = {
-					javascriptreact = { style_element = "{/*%s*/}" },
-				},
-			},
-		})
+		},
+	},
+	config = function(_, opts)
+		if type(opts.ensure_installed) == "table" then
+			---@type table<string, boolean>
+			local added = {}
+			opts.ensure_installed = vim.tbl_filter(function(lang)
+				if added[lang] then
+					return false
+				end
+				added[lang] = true
+				return true
+			end, opts.ensure_installed)
+		end
+		require("nvim-treesitter.configs").setup(opts)
 	end,
 }

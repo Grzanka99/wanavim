@@ -20,4 +20,36 @@ require("lazy").setup({
 	{ import = "config/treesitter" },
 	{ import = "config/telescope" },
 	{ import = "config/nvim-comment" },
+	{ import = "config/harpoon" },
+	{ import = "config/illuminate" },
+	{ import = "config/gitsigns" },
+	{ import = "config/lualine" },
+	{ import = "config/bufferline" },
+	{
+		"folke/todo-comments.nvim",
+		lazy = false,
+		config = function()
+			require("todo-comments").setup()
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		event = "BufEnter",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "BufEnter",
+		config = function()
+			require("nvim-autopairs").setup()
+		end,
+	},
+	{ "tpope/vim-sleuth" },
+	{ "editorconfig/editorconfig-vim" },
+	{
+		"sindrets/diffview.nvim",
+		cmd = "DiffviewOpen",
+	},
 })

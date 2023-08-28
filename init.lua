@@ -13,8 +13,11 @@ __ = {
 		{ name = "tsserver", enabled = true },
 	},
 	formatters = {},
+	diagnostics = {},
 	treesitter = {},
 }
 
 require("base")
 require("plugins")
+require("keybindings")
+require("config/config")

@@ -1,5 +1,8 @@
 local fileTypes = { "vue", "typescript", "typescriptreact", "javascript", "javascriptreact" }
 
+vim.keymap.set({ "n", "v" }, "<Leader>c", ":CommentToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<M-c>", ":CommentToggle<CR>", { noremap = true, silent = true })
+
 local function contains(table, val)
 	for i = 1, #table do
 		if table[i] == val then
@@ -14,9 +17,7 @@ return {
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},
-	keys = {
-		{ "<M-c>", ":CommentToggle<CR>", { noremap = true, silent = true } },
-	},
+	cmd = "CommentToggle",
 	config = function()
 		require("nvim_comment").setup({
 			create_mappings = false,
