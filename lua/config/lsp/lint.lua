@@ -3,7 +3,7 @@ return {
 	dependencies = {
 		"williamboman/mason.nvim",
 	},
-	cmd = { "BufReadPost", "BufNewFile" },
+	event = { "BufReadPost", "BufNewFile" },
 	config = function()
 		local linters_list = {}
 
@@ -21,7 +21,7 @@ return {
 
 		require("lint").linters_by_ft = linters_list
 
-		vim.api.nvim_create_autocmd({ "InsertLeave", "BufEnter" }, {
+		vim.api.nvim_create_autocmd({ "InsertLeave", "BufEnter", "BufWritePost" }, {
 			callback = function()
 				require("lint").try_lint()
 			end,
