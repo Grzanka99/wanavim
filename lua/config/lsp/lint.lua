@@ -1,9 +1,20 @@
+local capture_shell = require("utils.capture-shell")
+
 return {
 	"mfussenegger/nvim-lint",
 	dependencies = {
 		"williamboman/mason.nvim",
 	},
 	event = { "BufReadPost", "BufNewFile" },
+	cond = function()
+		local isBiome = capture_shell('[ -f "biome.json" ] && echo 1 || echo 0')
+
+		if tonumber(isBiome) > 0 then
+			return false
+		end
+
+		return true
+	end,
 	config = function()
 		local linters_list = {}
 

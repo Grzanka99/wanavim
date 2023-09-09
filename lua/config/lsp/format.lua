@@ -1,3 +1,5 @@
+local capture_shell = require("utils.capture-shell")
+
 local default_list = {
 	{ name = "stylua", enabled = true, filetypes = { "lua" } },
 	{ name = "remove_trailing_whitespace", enabled = true, filetypes = { "*" } },
@@ -39,9 +41,19 @@ vim.api.nvim_create_user_command("ToggleFormatting", function()
 	print("Setting autoformatting to: " .. tostring(format_is_enabled))
 end, {})
 
+local function isEnabled()
+	local isBiome = capture_shell('[ -f "biome.json" ] && echo 1 || echo 0')
+
+	if tonumber(isBiome) > 0 then
+		return false
+	end
+
+	return true
+end
+
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	callback = function()
-		if not format_is_enabled then
+		if not format_is_enabled or not isEnabled() then
 			return
 		end
 		vim.cmd("FormatWrite")
@@ -54,6 +66,7 @@ return {
 		"williamboman/mason.nvim",
 	},
 	cmd = "FormatWrite",
+	cond = isEnabled(),
 	config = function()
 		local builtin_formatters = require("formatter.filetypes")
 

@@ -43,6 +43,7 @@ return {
 			["tsserver"] = require("lang.typescript"),
 			["volar"] = require("lang.volar"),
 			["denols"] = require("lang.deno"),
+			["biome"] = require("lang.biome"),
 		})
 	end,
 }
