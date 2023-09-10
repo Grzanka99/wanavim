@@ -28,11 +28,13 @@ local function checkFileTypes()
 end
 
 local function setup_function()
-	vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-		callback = function()
-			vim.lsp.buf.format()
-		end,
-	})
+	if not disableForNonBiome() then
+		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+			callback = function()
+				vim.lsp.buf.format()
+			end,
+		})
+	end
 
 	require("lspconfig").biome.setup({
 		filetypes = checkFileTypes(),
