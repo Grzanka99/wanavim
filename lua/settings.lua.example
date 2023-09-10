@@ -1,0 +1,73 @@
+__.lsp = {
+	{ name = "tsserver", enabled = true },
+	{ name = "volar", enabled = true },
+	{ name = "denols", enabled = true },
+	{ name = "gopls", enabled = true },
+	{ name = "ocamllsp", enabled = true, noai = true },
+	{ name = "biome", enabled = true },
+	{ name = "prismals", enabled = true },
+}
+
+__.formatters = {
+	{
+		name = "prettierd",
+		enabled = true,
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"javascript",
+			"javascriptreact",
+		},
+	},
+	{ name = "prettier", enabled = true, filetypes = { "vue" } },
+	{ name = "stylua", enabled = true, filetypes = { "lua" } },
+	{ name = "rustfmt", enabled = true, filetypes = { "rust" } },
+	{ name = "ocamlformat", enabled = true, filetypes = { "ocaml" } },
+	{ name = "gofmt", enabled = true, filetypes = { "go" } },
+}
+
+__.diagnostics = {
+	{
+		name = "eslint_d",
+		enabled = true,
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"javascript",
+			"javascriptreact",
+			"vue",
+		},
+	},
+	{ name = "luacheck", enabled = true, filetypes = { "lua" } },
+	{ name = "golangcilint", enabled = true, filetypes = { "go" } },
+}
+
+__.treesitter = {
+	{ name = "javascript", enabled = true },
+	{ name = "typescript", enabled = true },
+	{ name = "css", enabled = true },
+	{ name = "html", enabled = true },
+	{ name = "lua", enabled = true },
+	{ name = "vue", enabled = true },
+	{ name = "scss", enabled = true },
+	{ name = "rust", enabled = true },
+	{ name = "go", enabled = true },
+}
+
+__.colorscheme = { url = "catppuccin/nvim", name = "catppuccin-mocha" }
+
+__.gui = {
+	numberLines = true,
+	relativeLineNumber = false,
+	scrolloff = 8,
+	allowTransparency = false,
+}
+
+__.codestyle = {
+	tab_size = 2,
+	expandtab = true,
+}
+
+__.language = "en_US.utf8"
+
+vim.cmd("nnoremap q <Nop>")
