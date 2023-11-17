@@ -29,7 +29,7 @@ end
 
 local function setup_function()
 	if not disableForNonBiome() then
-		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 			callback = function()
 				vim.lsp.buf.format()
 			end,
