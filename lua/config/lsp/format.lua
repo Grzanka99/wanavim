@@ -24,7 +24,7 @@ local function get_formatters(builtin_formatters, config_list, load_default_list
 			end
 
 			if fmt.override then
-				formatters_list[ftype] = fmt.override
+				formatters_list[ftype] = fmt.override()
 			else
 				formatters_list[ftype] = {
 					builtin_formatters[ftname][fmt.name],
