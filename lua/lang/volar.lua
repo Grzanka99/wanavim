@@ -36,14 +36,15 @@ local function setup_function()
 	require("lspconfig").volar.setup({
 		filetypes = detectVueProjectAndControllTakeoverMode(),
 		cmd = { "vue-language-server", "--stdio" },
-		init_options = {
-			documentFeatures = {
-				documentFormatting = false,
+		settings = {
+			html = {
+				format = {
+					wrapAttributes = "preserve",
+				},
 			},
 		},
 		config = {
 			on_new_config = function(new_config, new_root_dir)
-				new_config.server_capabilities.document_formatting = false
 				new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
 			end,
 		},
