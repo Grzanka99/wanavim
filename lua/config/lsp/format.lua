@@ -53,9 +53,9 @@ end
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	callback = function()
-		if not format_is_enabled or not isEnabled() then
-			return
-		end
+		-- if not format_is_enabled or not isEnabled() then
+		-- 	return
+		-- end
 		vim.cmd("FormatWrite")
 	end,
 })
@@ -66,7 +66,7 @@ return {
 		"williamboman/mason.nvim",
 	},
 	cmd = "FormatWrite",
-	cond = isEnabled(),
+	-- cond = isEnabled(),
 	config = function()
 		local builtin_formatters = require("formatter.filetypes")
 
