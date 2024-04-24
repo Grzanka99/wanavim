@@ -24,5 +24,5 @@ vim.keymap.set("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "<Leader>w", ":w<CR>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("x", "p", '"_dP') -- do not replace clipboard

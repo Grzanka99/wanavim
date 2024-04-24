@@ -36,6 +36,11 @@ local function setup_function()
 	require("lspconfig").volar.setup({
 		filetypes = detectVueProjectAndControllTakeoverMode(),
 		cmd = { "vue-language-server", "--stdio" },
+		init_options = {
+			vue = {
+				hybridMode = false,
+			},
+		},
 		settings = {
 			html = {
 				format = {
