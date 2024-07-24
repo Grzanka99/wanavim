@@ -11,9 +11,6 @@ local default_filetypes = {
 
 local function disableForNonBiome()
 	local isBiome = capture_shell('[ -f "biome.json" ] && echo 1 || echo 0')
-	if not (tonumber(isBiome) > 0) then
-		isBiome = capture_shell('[ -f "Biomefile" ] && echo 1 || echo 0')
-	end
 
 	if tonumber(isBiome) > 0 then
 		return false
