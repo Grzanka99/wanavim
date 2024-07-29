@@ -5,10 +5,6 @@ vim.keymap.set("n", "<M-/>", ":bd<CR>")
 return {
 	"akinsho/bufferline.nvim",
 	event = "VeryLazy",
-	keys = {
-		{ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
-		{ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
-	},
 	opts = {
 		options = {
         -- stylua: ignore
@@ -16,6 +12,7 @@ return {
         -- stylua: ignore
         -- right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
 			diagnostics = "nvim_lsp",
+			diagnostics_is_enabled = true,
 			always_show_bufferline = false,
 			offsets = {
 				{

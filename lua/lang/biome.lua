@@ -7,6 +7,7 @@ local default_filetypes = {
 	"typescript",
 	"typescriptreact",
 	"typescript.tsx",
+	"vue",
 }
 
 local function disableForNonBiome()

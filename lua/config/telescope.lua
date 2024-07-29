@@ -12,6 +12,7 @@ return {
 	keys = {
 		{ "<Leader>ff", ":Telescope find_files<CR>" },
 		{ "<Leader>fb", ":Telescope buffers<CR>" },
+		{ "<M-b>", ":Telescope buffers<CR>" },
 		{ "<Leader>fg", ":Telescope live_grep<CR>" },
 		{ "<Leader>fs", ":Telescope lsp_document_symbols<CR>" },
 		{ "<Leader>fh", ":Telescope harpoon marks<CR>" },

@@ -24,7 +24,7 @@ require("lazy").setup({
 	{ import = "config.illuminate" },
 	{ import = "config.gitsigns" },
 	{ import = "config.lualine" },
-	{ import = "config.bufferline" },
+	-- { import = "config.bufferline" },
 	{ import = "config.alpha" },
 	{
 		"folke/todo-comments.nvim",

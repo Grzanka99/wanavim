@@ -24,13 +24,6 @@ return {
 			enable = true, -- false will disable the whole extension
 		},
 		indent = { enable = true },
-		autotag = { enable = true },
-		context_commentstring = {
-			enable = true,
-			config = {
-				javascriptreact = { style_element = "{/*%s*/}" },
-			},
-		},
 	},
 	config = function(_, opts)
 		if type(opts.ensure_installed) == "table" then
@@ -45,5 +38,27 @@ return {
 			end, opts.ensure_installed)
 		end
 		require("nvim-treesitter.configs").setup(opts)
+		require("ts_context_commentstring").setup({
+			enable = true,
+			config = {
+				javascriptreact = { style_element = "{/*%s*/}" },
+			},
+		})
+		require("nvim-ts-autotag").setup({
+			opts = {
+				-- Defaults
+				enable_close = true, -- Auto close tags
+				enable_rename = true, -- Auto rename pairs of tags
+				enable_close_on_slash = false, -- Auto close on trailing </
+			},
+			-- Also override individual filetype configs, these take priority.
+			-- Empty by default, useful if one of the "opts" global settings
+			-- doesn't work well in a specific filetype
+			per_filetype = {
+				["html"] = {
+					enable_close = false,
+				},
+			},
+		})
 	end,
 }

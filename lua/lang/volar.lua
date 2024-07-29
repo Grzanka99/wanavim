@@ -44,6 +44,7 @@ local function setup_function()
 		settings = {
 			html = {
 				format = {
+					enabled = false,
 					wrapAttributes = "preserve",
 				},
 			},
