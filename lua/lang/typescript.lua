@@ -25,22 +25,7 @@ local function filterReactDTS(value)
 end
 
 local default_filetypes =
-	{ "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" }
-
-local function disableForVueProject()
-	local isCorrectProjectType = capture_shell('[ -f "package.json" ] && echo 1 || echo 0')
-
-	if tonumber(isCorrectProjectType) == 0 then
-		return true
-	else
-		local isVue = capture_shell("grep -cow vue package.json")
-		if tonumber(isVue) and tonumber(isVue) > 0 then
-			return true
-		end
-	end
-
-	return false
-end
+	{ "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue" }
 
 local function disableForDenoProject()
 	local isCorrectProjectType = capture_shell('[ -f "deno.jsonc" ] && echo 1 || echo 0')
@@ -53,7 +38,7 @@ local function disableForDenoProject()
 end
 
 local function checkFileTypes()
-	if disableForVueProject() or disableForDenoProject() then
+	if disableForDenoProject() then
 		return { "none" }
 	end
 
@@ -61,7 +46,16 @@ local function checkFileTypes()
 end
 
 local function setup_function()
-	require("lspconfig").tsserver.setup({
+	require("lspconfig").ts_ls.setup({
+		init_options = {
+			plugins = {
+				{
+					name = "@vue/typescript-plugin",
+					location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+					languages = { "javascript", "typescript", "vue" },
+				},
+			},
+		},
 		filetypes = checkFileTypes(),
 		on_attach = function(client)
 			client.server_capabilities.documentFormattingProvider = false
@@ -71,16 +65,16 @@ local function setup_function()
 			includeCompletionsForModuleExports = true,
 			includeCompletionsWithInsertText = true,
 		},
-		handlers = {
-			["textDocument/definition"] = function(err, result, method, ...)
-				if vim.tbl_islist(result) and #result > 1 then
-					local filtered_result = filter(result, filterReactDTS)
-					return vim.lsp.handlers["textDocument/definition"](err, filtered_result, method, ...)
-				end
-
-				vim.lsp.handlers["textDocument/definition"](err, result, method, ...)
-			end,
-		},
+		-- handlers = {
+		-- 	["textDocument/definition"] = function(err, result, method, ...)
+		-- 		if vim.tbl_islist(result) and #result > 1 then
+		-- 			local filtered_result = filter(result, filterReactDTS)
+		-- 			return vim.lsp.handlers["textDocument/definition"](err, filtered_result, method, ...)
+		-- 		end
+		--
+		-- 		vim.lsp.handlers["textDocument/definition"](err, result, method, ...)
+		-- 	end,
+		-- },
 	})
 end
 

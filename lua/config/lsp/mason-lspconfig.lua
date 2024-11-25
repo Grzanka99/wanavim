@@ -41,7 +41,7 @@ return {
 			["cssls"] = require("lang.css"),
 			["html"] = require("lang.html"),
 			["tsserver"] = require("lang.typescript"),
-			["volar"] = require("lang.volar"),
+			["volar"] = function() end,
 			["denols"] = require("lang.deno"),
 			["biome"] = require("lang.biome"),
 		})
