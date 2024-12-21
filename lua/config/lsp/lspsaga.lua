@@ -6,8 +6,8 @@ return {
 	},
 	cmd = "Lspsaga",
 	keys = {
-		{ "K", ":Lspsaga hover_doc<CR>" },
-		{ "D", ":Lspsaga show_line_diagnostics<CR>" },
+		{ "K", ":lua vim.lsp.buf.hover()<CR>" },
+		{ "D", ":lua vim.diagnostic.open_float()<CR>" },
 		{ "<Leader>da", ":Lspsaga code_action<CR>" },
 		{ "<Leader>dr", ":Lspsaga rename<CR>" },
 		{ "<Leader>dp", ":Lspsaga peek_definition<CR>" },

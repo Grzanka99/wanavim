@@ -40,7 +40,7 @@ return {
 			end,
 			["cssls"] = require("lang.css"),
 			["html"] = require("lang.html"),
-			["tsserver"] = require("lang.typescript"),
+			["ts_ls"] = require("lang.typescript"),
 			["volar"] = function() end,
 			["denols"] = require("lang.deno"),
 			["biome"] = require("lang.biome"),

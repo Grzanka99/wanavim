@@ -10,7 +10,7 @@ __ = {
 		expandtab = true,
 	},
 	lsp = {
-		{ name = "tsserver", enabled = true },
+		{ name = "ts_ls", enabled = true },
 	},
 	formatters = {},
 	diagnostics = {},
