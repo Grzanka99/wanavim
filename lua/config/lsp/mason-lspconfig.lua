@@ -40,8 +40,8 @@ return {
 			end,
 			["cssls"] = require("lang.css"),
 			["html"] = require("lang.html"),
+			["volar"] = require("lang.volar"),
 			["ts_ls"] = require("lang.typescript"),
-			["volar"] = function() end,
 			["denols"] = require("lang.deno"),
 			["biome"] = require("lang.biome"),
 		})

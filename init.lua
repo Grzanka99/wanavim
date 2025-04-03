@@ -22,3 +22,15 @@ require("base")
 require("plugins")
 require("keybindings")
 require("config/config")
+
+require("catppuccin").setup({
+	color_overrides = {
+		mocha = {
+			base = "#000000",
+			mantle = "#000000",
+			crust = "#000000",
+		},
+	},
+})
+
+vim.cmd.colorscheme("catppuccin")

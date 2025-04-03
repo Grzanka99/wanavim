@@ -33,28 +33,32 @@ local function detectVueProjectAndControllTakeoverMode()
 end
 
 local function setup_function()
-	require("lspconfig").volar.setup({
-		filetypes = detectVueProjectAndControllTakeoverMode(),
-		cmd = { "vue-language-server", "--stdio" },
-		init_options = {
-			vue = {
-				hybridMode = false,
-			},
-		},
-		settings = {
-			html = {
-				format = {
-					enabled = false,
-					wrapAttributes = "preserve",
-				},
-			},
-		},
-		config = {
-			on_new_config = function(new_config, new_root_dir)
-				new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
-			end,
-		},
-	})
+	require("lspconfig").volar.setup({})
 end
+
+-- local function setup_function()
+-- 	require("lspconfig").volar.setup({
+-- 		filetypes = detectVueProjectAndControllTakeoverMode(),
+-- 		cmd = { "vue-language-server", "--stdio" },
+-- 		init_options = {
+-- 			vue = {
+-- 				hybridMode = false,
+-- 			},
+-- 		},
+-- 		settings = {
+-- 			html = {
+-- 				format = {
+-- 					enabled = false,
+-- 					wrapAttributes = "preserve",
+-- 				},
+-- 			},
+-- 		},
+-- 		config = {
+-- 			on_new_config = function(new_config, new_root_dir)
+-- 				new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
+-- 			end,
+-- 		},
+-- 	})
+-- end
 
 return setup_function
