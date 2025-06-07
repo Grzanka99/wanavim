@@ -33,7 +33,15 @@ local function detectVueProjectAndControllTakeoverMode()
 end
 
 local function setup_function()
-	require("lspconfig").volar.setup({})
+	require("lspconfig").volar.setup({
+		settings = {
+			html = {
+				format = {
+					wrapAttributes = "force-expand-multiline",
+				},
+			},
+		},
+	})
 end
 
 -- local function setup_function()
